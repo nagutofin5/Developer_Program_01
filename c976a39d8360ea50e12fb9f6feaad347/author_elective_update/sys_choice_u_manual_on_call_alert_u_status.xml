@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_status" table="u_manual_on_call_alert" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_status</element>
+            <name>u_manual_on_call_alert</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-04-07 15:14:19</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_status</sys_name>
+            <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+            <sys_update_name>sys_choice_u_manual_on_call_alert_u_status</sys_update_name>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-04-07 15:14:19</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Requested</label>
+            <language>en</language>
+            <name>u_manual_on_call_alert</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-04-07 15:14:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-04-07 15:14:45</sys_updated_on>
+            <value>requested</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>In Progress</label>
+            <language>en</language>
+            <name>u_manual_on_call_alert</name>
+            <sequence>200</sequence>
+            <synonyms/>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-04-07 15:14:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-04-07 15:14:48</sys_updated_on>
+            <value>in_progress</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pending</label>
+            <language>en</language>
+            <name>u_manual_on_call_alert</name>
+            <sequence>300</sequence>
+            <synonyms/>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-04-07 15:14:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-04-07 15:15:08</sys_updated_on>
+            <value>pending</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Completed</label>
+            <language>en</language>
+            <name>u_manual_on_call_alert</name>
+            <sequence>400</sequence>
+            <synonyms/>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-04-07 15:15:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-04-07 15:15:23</sys_updated_on>
+            <value>completed</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Incomplete</label>
+            <language>en</language>
+            <name>u_manual_on_call_alert</name>
+            <sequence>500</sequence>
+            <synonyms/>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-04-07 15:15:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-04-07 15:15:39</sys_updated_on>
+            <value>incomplete</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Canceled</label>
+            <language>en</language>
+            <name>u_manual_on_call_alert</name>
+            <sequence>600</sequence>
+            <synonyms/>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-04-07 15:15:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-04-07 15:15:59</sys_updated_on>
+            <value>canceled</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>
