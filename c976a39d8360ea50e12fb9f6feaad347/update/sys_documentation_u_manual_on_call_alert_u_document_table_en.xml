@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_document_table" label="Document Table" language="en" table="u_manual_on_call_alert">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_document_table</element>
+            <help/>
+            <hint/>
+            <label>Document Table</label>
+            <language>en</language>
+            <name>u_manual_on_call_alert</name>
+            <plural>Document Tables</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-04-07 15:01:58</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Document Table</sys_name>
+            <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+            <sys_update_name>sys_documentation_u_manual_on_call_alert_u_document_table_en</sys_update_name>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-04-07 15:01:58</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

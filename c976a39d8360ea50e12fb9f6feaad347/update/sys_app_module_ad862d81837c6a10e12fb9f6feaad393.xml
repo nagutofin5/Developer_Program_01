@@ -8,32 +8,32 @@
         <hint/>
         <homepage/>
         <image/>
-        <link_type>DIRECT</link_type>
+        <link_type>LIST</link_type>
         <map_page/>
-        <mobile_title>Initiate On - Call</mobile_title>
+        <mobile_title>Manual On - Call Alerts</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name/>
+        <name>u_manual_on_call_alert</name>
         <order>200</order>
         <override_menu_roles>false</override_menu_roles>
-        <query>https://dev194939.service-now.com/sp</query>
+        <query/>
         <report/>
         <require_confirmation>true</require_confirmation>
-        <roles/>
+        <roles>u_manual_on_call_alert_user</roles>
         <sys_class_name>sys_app_module</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-04-07 08:32:21</sys_created_on>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-04-07 13:38:56</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>263068c983f46a10e12fb9f6feaad398</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_id>ad862d81837c6a10e12fb9f6feaad393</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Initiate Alert</sys_name>
         <sys_overrides/>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name>sys_app_module_263068c983f46a10e12fb9f6feaad398</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-04-07 08:33:30</sys_updated_on>
+        <sys_update_name>sys_app_module_ad862d81837c6a10e12fb9f6feaad393</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-04-07 13:43:09</sys_updated_on>
         <timeline_page/>
         <title>Initiate Alert</title>
         <uncancelable>false</uncancelable>
