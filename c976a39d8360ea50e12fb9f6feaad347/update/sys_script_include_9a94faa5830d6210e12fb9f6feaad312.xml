@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.glide_record_functions</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>This script include contains generic and universal usage of scripts which helps in reducing creating multiple functions</description>
+        <mobile_callable>false</mobile_callable>
+        <name>glide_record_functions</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var glide_record_functions = Class.create();
+glide_record_functions.prototype = {
+    initialize: function() {},
+
+    /*  Description: Fetch single record value with all fields
+    	Input Value: Table Name and Encoded Query
+    	Output Value: single record with all fields value in JSON format
+    */
+    getSingleRecord: function( /*Mandatory*/ tableName, /*Mandatory*/ encodedQuery) {
+        var tableObject = {};
+        var gr, grU, tableFields, i, rowCount = 0;
+        gr = new GlideRecord(tableName);
+        gr.addEncodedQuery(encodedQuery);
+        gr.query();
+        rowCount = gr.getRowCount();
+        if (gr._next()) {
+            grU = new GlideRecordUtil();
+            tableFields = grU.getFields(gr);
+            for (i = 0; i < tableFields.length; i++) {
+                tableObject[tableFields[i]] = gr.getValue(tableFields[i]);
+            }
+            tableObject['row_count'] = rowCount;
+            tableObject['record_object'] = gr;
+        } else {
+            tableObject['row_count'] = rowCount;
+        }
+        return JSON.stringify(tableObject);
+    },
+
+
+    /*  Description: Get table record(s) value with all or specific fields
+    	Input Value: Table Name, Encoded Query and Specific Fields
+    	Output Value: Record(s) with all or specific fields value in JSON format
+    */
+    getTableRecords: function( /*Mandatory*/ tableName, /*Mandatory*/ encodedQuery, /*Optional*/ specificFields) {
+        specificFields = specificFields.trim();
+        var tableObject = {};
+        var tableRecords = [];
+        var gr, requiredFields, tableFields, i, dictionaryEncodeQuery, variableType, addDisplay = '';
+        if (!gs.nil(specificFields)) {
+            requiredFields = specificFields.toString().split(',');
+        }
+        gr = new GlideRecord(tableName);
+        gr.addEncodedQuery(encodedQuery);
+        gr.query();
+        while (gr._next()) {
+            tableObject = {};
+            if ((requiredFields.length != 0) && (specificFields != '')) {
+                //Loop through each required fields
+                for (i = 0; i < requiredFields.length; i++) {
+                    if (!gs.nil(requiredFields[i])) {
+                        addDisplay = '';
+                        //Fetch Field Type
+                        dictionaryEncodeQuery = 'name=' + tableName + '^element=' + requiredFields[i];
+                        variableType = new global.glide_record_functions().fetchFieldType(dictionaryEncodeQuery); //List Collector: glide_list, Reference: reference
+                        if (variableType == 'reference' || variableType == 'glide_list') {
+                            addDisplay = requiredFields[i] + '_name';
+                            tableObject[requiredFields[i]] = gr.getValue(requiredFields[i]); //Stores sys id
+                            tableObject[addDisplay] = gr.getDisplayValue(requiredFields[i]); //Stores display value of reference filed
+                        } else {
+                            tableObject[requiredFields[i]] = gr.getValue(requiredFields[i]);
+                        }
+                    }
+                }
+            } else {
+                grU = new GlideRecordUtil();
+                tableFields = grU.getFields(gr);
+                //Loop through all fields
+                for (i = 0; i < tableFields.length; i++) {
+                    addDisplay = '';
+                    //Fetch Field Type
+                    dictionaryEncodeQuery = 'name=' + tableName + '^element=' + tableFields[i];
+                    variableType = new global.glide_record_functions().fetchFieldType(dictionaryEncodeQuery); //List Collector: glide_list, Reference: reference
+                    if (variableType == 'reference' || variableType == 'glide_list') {
+                        addDisplay = tableFields[i] + '_name';
+                        tableObject[tableFields[i]] = gr.getValue(tableFields[i]); //Stores sys id
+                        tableObject[addDisplay] = gr.getDisplayValue(tableFields[i]); //Stores display value of reference filed
+                    } else {
+                        tableObject[tableFields[i]] = gr.getValue(tableFields[i]);
+                    }
+                }
+            }
+            tableRecords.push(tableObject);
+        }
+        return JSON.stringify(tableRecords);
+    },
+
+
+    /*  Description: Fetch variable type
+        	Input Value: Encoded Query
+        	Output Value: returns filed type
+        */
+    fetchFieldType: function( /*Mandatory*/ encodedQuery) {
+        //E.g  encodedQuery = 'name=sys_group_has_role^element=role'
+        var typeValue = '';
+        var grDictionary = new GlideRecord('sys_dictionary');
+        grDictionary.addEncodedQuery(encodedQuery);
+        grDictionary.query();
+        if (grDictionary.next()) {
+            //List Collector: glide_list, Reference: reference
+            typeValue = grDictionary.internal_type;
+        }
+        return typeValue.toString();
+    },
+
+
+    /*  Description: Total number of day(s) between two dates
+    	Input Value: Start Date and End Date
+    	Output Value: Number of day(s) difference between two dates
+    */
+    getTotalDays: function( /*Mandatory*/ startDate, /*Mandatory*/ endDate) {
+        return Math.floor(gs.dateDiff(startDate, endDate, true) / 86400);
+    },
+
+
+    /*  Description: Deleting array element based on another array element and returns unique values
+    	Input Value: Two arrays
+    	Output Value: Single array with unique values
+		
+		Ex: 
+		array1 = ['1', '2', '3', '4'];
+		array2 = ['1', '4'];
+		output: array1 = ['2', '3'];
+    */
+    fetchUniqueArrayItems: function( /*Mandatory*/ array1, /*Mandatory*/ array2) {
+        if (array1.length >= array2.length) {
+            for (var i = 0; i < array2.length; i++) {
+                if (array1.indexOf(array2[i]) != -1) {
+                    array1.splice(array1.indexOf(array2[i]), 1);
+                }
+            }
+            return array1.join(',');
+        }
+        if (array1.length < array2.length) {
+            for (i = 0; i < array1.length; i++) {
+                if (array2.indexOf(array1[i]) != -1) {
+                    array2.splice(array2.indexOf(array1[i]), 1);
+                }
+            }
+            return array2.join(',');
+        }
+    },
+
+
+    /*  Description: Encrypt the given data
+    	Input Value: Field Value
+    	Output Value: Encrypted value
+    */
+    dataEncryption: function( /*Mandatory*/ data) {
+        //Perform encryption
+        var encrypter = new GlideEncrypter();
+        var encryptedString = encrypter.encrypt(data.toString());
+        return encryptedString;
+    },
+
+
+    /*  Description: Decrypt the given data
+    	Input Value: Field Value
+    	Output Value: Decrypted value
+    */
+    dataDecryption: function( /*Mandatory*/ data) {
+        //Perform encryption
+        var decrypter = new GlideEncrypter();
+        var decryptedString = decrypter.decrypt(data.toString());
+        return decryptedString;
+    },
+
+
+    /*  Description: Delete table records
+    	Input Value: Table Name and Encoded Query
+    	Output Value: Deletes the requested record
+    */
+    deleteTableRecord: function( /*Mandatory*/ tableName, /*Mandatory*/ encodedQuery) {
+        var gr = new GlideRecord(tableName);
+        gr.addEncodedQuery(encodedQuery);
+        gr.query();
+        while (gr._next()) {
+            gr.deleteMultiple();
+        }
+    },
+
+    type: 'glide_record_functions'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-04-21 18:56:31</sys_created_on>
+        <sys_id>9a94faa5830d6210e12fb9f6feaad312</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>glide_record_functions</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sys_script_include_9a94faa5830d6210e12fb9f6feaad312</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-04-21 18:56:31</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>9a94faa5830d6210e12fb9f6feaad312</id>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-04-21 18:56:31</sys_created_on>
+        <sys_id>0675f665830d6210e12fb9f6feaad34f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-04-21 18:56:31</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
