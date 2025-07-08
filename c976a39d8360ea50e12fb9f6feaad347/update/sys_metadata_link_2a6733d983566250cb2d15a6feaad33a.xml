@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>d666f6c1835eee10cb2d15a6feaad3aa</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="api_key">
+    <api_key action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <auth_scope/>
+        <description>nagaraj3_integration_user</description>
+        <expires/>
+        <name>REST API Key - 01</name>
+        <source>global</source>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-06-21 09:03:40</sys_created_on>
+        <sys_id>d666f6c1835eee10cb2d15a6feaad3aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-06-21 09:03:40</sys_updated_on>
+        <token>﷞﷟﷒9fd6f205835eee10cb2d15a6feaad3c7﷬﷔1﷬﷭4GbQuz7xECn80muwYSl_9w==kkx2AWkJGvA1cGfTPUT13kfcV4MgrblMEl4IjLZ0O4Ksk_lnwnV6wH0UvecYMLeNFDDkZYJ6ZmGt7QeAsZOAqCBLBJMz3ST2MgpTWHDOkWIfe4xm0-lHvG8Gj_sPSCIZ2N6YFGoYarlcDQ==﷮﷯</token>
+        <token_hash>e0fc08d4d3c04568d457190f17beecea10f2862e555103d80bd2bb7c91486392</token_hash>
+        <user display_value="Nagaraj Tofin3 Integration User">30e57a41835eee10cb2d15a6feaad3c1</user>
+    </api_key>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-06-22 08:24:38</sys_created_on>
+        <sys_id>2a6733d983566250cb2d15a6feaad33a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>global</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sys_metadata_link_2a6733d983566250cb2d15a6feaad33a</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-06-22 08:24:38</sys_updated_on>
+        <tablename>api_key</tablename>
+    </sys_metadata_link>
+</record_update>

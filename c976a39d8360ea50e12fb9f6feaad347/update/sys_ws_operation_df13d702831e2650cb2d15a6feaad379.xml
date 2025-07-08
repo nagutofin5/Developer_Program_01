@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>GET Incident Details</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    // implement resource here
+
+    var pathObj = request.pathParams;
+    var incidentNumber = pathObj.number;
+    var incidentDetails = {};
+
+    var grIncident = new GlideRecord('incident');
+    grIncident.addQuery('number', incidentNumber);
+    grIncident.query();
+
+    while (grIncident._next()) {
+        incidentDetails.number = grIncident.number;
+        incidentDetails.state = grIncident.state;
+        incidentDetails.logger = {
+            'logger_name': grIncident.caller_id.name,
+            'logger_email': grIncident.caller_id.email
+        };
+    }
+
+    response.setBody(incidentDetails);
+    response.setStatus(200);
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/376417/dev197335_v1_0/incident/{number}</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/incident/{number}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>false</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-06-24 13:42:22</sys_created_on>
+        <sys_id>df13d702831e2650cb2d15a6feaad379</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>GET Incident Details</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sys_ws_operation_df13d702831e2650cb2d15a6feaad379</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-06-24 14:07:14</sys_updated_on>
+        <web_service_definition display_value="dev197335 V1.0">c6c293c6835e2650cb2d15a6feaad3fe</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>df13d702831e2650cb2d15a6feaad379</id>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-06-24 13:42:22</sys_created_on>
+        <sys_id>1c53d3c6835e2650cb2d15a6feaad306</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-06-24 13:42:22</sys_updated_on>
+        <table>sys_ws_operation</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

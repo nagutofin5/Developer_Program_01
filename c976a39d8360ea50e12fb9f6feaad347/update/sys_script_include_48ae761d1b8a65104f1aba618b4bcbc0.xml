@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.CatalogClientScripts</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>This script include is created to handle all catalog items client scripts</description>
+        <mobile_callable>false</mobile_callable>
+        <name>CatalogClientScripts</name>
+        <sandbox_callable>true</sandbox_callable>
+        <script><![CDATA[var CatalogClientScripts = Class.create();
+CatalogClientScripts.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+
+    getGroupDetails: function() {
+        var group_sysID = this.getParameter('sysparm_group');
+        var groupDetails = [];
+        var on_call_group = '';
+
+        var grTable = new GlideRecord('sys_user_group');
+        grTable.addEncodedQuery('sys_id=' + group_sysID);
+        grTable.query();
+
+        while (grTable._next()) {
+            var groupJSON = {};
+
+            //Name
+            if (grTable.getValue('name') != null) {
+                groupJSON['name'] = grTable.getDisplayValue('name');
+            } else {
+                groupJSON['name'] = '';
+            }
+
+            //Email
+            if (grTable.getValue('email') != null) {
+                groupJSON['email'] = grTable.getDisplayValue('email');
+            } else {
+                groupJSON['email'] = '';
+            }
+
+            //manager
+            if (grTable.getValue('manager') != null) {
+                groupJSON['manager'] = grTable.getDisplayValue('manager');
+            } else {
+                groupJSON['manager'] = '';
+            }
+
+            //description
+            if (grTable.getValue('description') != null) {
+                groupJSON['description'] = grTable.getDisplayValue('description');
+            } else {
+                groupJSON['description'] = '';
+            }
+
+            //u_winaproach_group
+            var winCodes = [];
+            var grupQuerywin = "u_on_call_group=" + group_sysID + "^typeLIKEf4c89f4adb1f95105851fbc6f4961918^u_winaproach_group!=";
+            var winGRP = new GlideRecord("sys_user_group");
+            winGRP.addEncodedQuery(grupQuerywin);
+            winGRP.query();
+            while (winGRP.next()) {
+                winCodes.push(winGRP.getValue('u_winaproach_group'));
+            }
+            if (winCodes.length > 0) {
+                if (winCodes.length == 1) {
+                    groupJSON['u_winaproach_group'] = winCodes.toString();
+                }
+
+                if (winCodes.length > 1) {
+                    groupJSON['u_winaproach_group'] = winCodes.join(', ');
+                }
+            } else {
+                groupJSON['u_winaproach_group'] = '';
+            }
+
+
+            //u_jira_team_id
+            if (grTable.getValue('u_jira_team_id') != null) {
+                groupJSON['u_jira_team_id'] = grTable.getDisplayValue('u_jira_team_id');
+            } else {
+                groupJSON['u_jira_team_id'] = '';
+            }
+
+            //u_on_call_group
+            if (grTable.getValue('u_on_call_group') != null) {
+                groupJSON['u_on_call_group'] = grTable.getDisplayValue('u_on_call_group');
+                on_call_group = grTable.getValue('u_on_call_group');
+            } else {
+                groupJSON['u_on_call_group'] = '';
+            }
+
+            //u_additional_managers
+            if (grTable.getValue('u_additional_managers') != null) {
+                groupJSON['u_additional_managers'] = grTable.getDisplayValue('u_additional_managers');
+            } else {
+                groupJSON['u_additional_managers'] = '';
+            }
+
+            //type
+            if (grTable.getValue('type') != null) {
+                groupJSON['type'] = grTable.getDisplayValue('type');
+            } else {
+                groupJSON['type'] = '';
+            }
+
+
+            //Persona Groups
+            var personaGroups = [];
+            var grLICM = new GlideRecord('x_amfr_amadeus_sys_license_management');
+            grLICM.addEncodedQuery('u_group.sys_id=' + group_sysID);
+            grLICM.query();
+
+            while (grLICM._next()) {
+                if (grLICM.u_role != null && personaGroups.indexOf(grLICM.getDisplayValue('u_role')) == -1) {
+                    personaGroups.push(grLICM.getDisplayValue('u_role').toString());
+                }
+            }
+            if (personaGroups.length > 0) {
+                if (personaGroups.length == 1) {
+                    groupJSON['persona'] = personaGroups.toString();
+                }
+
+                if (personaGroups.length > 1) {
+                    groupJSON['persona'] = personaGroups.join(', ');
+                }
+            } else {
+                groupJSON['persona'] = '';
+            }
+
+
+            //Group Members
+            var groupMembers = [];
+            var grMember = new GlideRecord('sys_user_grmember');
+            grMember.addEncodedQuery('group.sys_id=' + group_sysID);
+            grMember.query();
+
+            while (grMember._next()) {
+                if ((groupMembers.indexOf(grMember.getDisplayValue('user')) == -1) && (grMember.getDisplayValue('user') != '')) {
+                    groupMembers.push(grMember.getDisplayValue('user').toString());
+                }
+            }
+            if (groupMembers.length > 0) {
+                if (groupMembers.length == 1) {
+                    groupJSON['members'] = groupMembers.toString();
+                }
+
+                if (groupMembers.length > 1) {
+                    groupJSON['members'] = groupMembers.join(', ');
+                }
+            } else {
+                groupJSON['members'] = '';
+            }
+
+
+            //On-Call Primary User Info
+            if (on_call_group != null) {
+                //PRIMARY USER
+                var currentTime = new GlideDateTime();
+                var onCallRotation = new OnCallRotation();
+                var result = onCallRotation.who(on_call_group, currentTime);
+                var primaryUser = onCallRotation.getPrimaryUser();
+
+                var grUser = new GlideRecord('sys_user');
+                if (grUser.get(primaryUser)) {
+                    groupJSON['on_call_member'] = grUser.getDisplayValue('name');
+                    groupJSON['on_call_member_manager'] = grUser.getDisplayValue('manager');
+                    groupJSON['on_call_member_mobile'] = grUser.getDisplayValue('mobile_phone');
+
+                }
+            }
+
+
+            //Push into returning array
+            groupDetails.push(groupJSON);
+        }
+
+        return JSON.stringify(groupDetails);
+    },
+
+    //Check records counts
+    getGroupRecords: function() {
+        var table = this.getParameter('sysparm_table');
+        var encodedQuery = this.getParameter('sysparm_encodedQuery');
+        var groupName = this.getParameter('sysparm_groupName');
+
+        var grTable = new GlideRecord(table);
+        grTable.addEncodedQuery(encodedQuery);
+        grTable.query();
+        if (grTable.getRowCount() > 0) {
+            return true;
+        } else {
+            var grMTOM = new GlideRecord('sc_item_option_mtom');
+            grMTOM.addEncodedQuery('sc_item_option.item_option_new.sys_id=58d1621f97827594250610b00153af85^request_item.stateIN-5,1,2^sc_item_option.value=' + groupName + '^ORsc_item_option.value=fcg-' + groupName);
+            grMTOM.query();
+            if (grMTOM.next()) {
+                return 'wip';
+            } else {
+                return false;
+            }
+        }
+    },
+
+    /*  Description: Performs users authentication
+		Input Value: User ID (sys_id), current password
+    	Output Value: Authnetication result (true or false), Locked Out (true or false) and User ID (string)
+    */
+    getUserAuthenticate: function() {
+        var userSysID = this.getParameter('sysparm_userSysID');
+        var currentPassword = this.getParameter('sysparm_currentPassword');
+
+        //Get User record details
+        var grScriptInclude = JSON.parse(new global.glide_record_functions().getSingleRecord('sys_user', 'sys_id=' + userSysID));
+
+        //Check Authentication
+        var grUserAuthenticate = GlideUser.authenticate(grScriptInclude.user_name, currentPassword);
+        return grUserAuthenticate + ',' + grScriptInclude.locked_out + ',' + grScriptInclude.user_name; //true or false
+
+    },
+
+    /*  Description: Fetch table record value with all fields
+		Input Value: Table Name, Encoded Query and Specific fileds (optional)
+		Output Value: single record with all fields value in JSON format
+	*/
+    getTableRecords: function() {
+        var tableName = this.getParameter('sysparm_tableName');
+        var encodedQuery = this.getParameter('sysparm_encodedQuery');
+        var requiredFields = this.getParameter('sysparm_requiredFields').toString();
+        //Get User record details
+        var scriptInclude = new global.glide_record_functions().getTableRecords(tableName, encodedQuery, requiredFields);
+        return scriptInclude;
+    },
+
+    /*  Description: Encrypt the given data
+    	Input Value: Field Value
+    	Output Value: Encrypted value
+    */
+    dataEncryption: function() {
+        var data = this.getParameter('sysparm_data').toString();
+        //Perform encryption
+        var scriptInclude = new global.glide_record_functions().dataEncryption(data);
+        return scriptInclude;
+    },
+
+
+    /*  Description: Decrypt the given data
+    	Input Value: Field Value
+    	Output Value: Decrypted value
+    */
+    dataDecryption: function() {
+        var data = this.getParameter('sysparm_data').toString();
+        //Perform decryption
+        var scriptInclude = new global.glide_record_functions().dataDecryption(data);
+        return scriptInclude;
+    },
+
+
+    /*  Description: Get property value
+    	Input Value: Property name
+    	Output Value: Property value
+    */
+    getProperty: function() {
+        var propertyName = this.getParameter('sysparm_propertyName').toString();
+        //Fetch property
+        var scriptInclude = new global.glide_record_functions().getProperty(propertyName);
+        return scriptInclude;
+    },
+
+    /*  Description: Check is user memberOf specific group
+		Input Value: UserID, GroupID
+		Output Value: true or false
+	*/
+    isUserMemberOfGroup: function() {
+        var userID = this.getParameter('sysparm_userId').toString();
+        var groupID = this.getParameter('sysparm_groupId').toString();
+        return new global.TriggerRuleSNC()._isUserMemberOfGroup(userID, groupID).toString();
+    },
+
+    type: 'CatalogClientScripts'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>nagaraj.tofin@amadeus.com</sys_created_by>
+        <sys_created_on>2023-04-06 09:16:13</sys_created_on>
+        <sys_id>48ae761d1b8a65104f1aba618b4bcbc0</sys_id>
+        <sys_mod_count>42</sys_mod_count>
+        <sys_name>CatalogClientScripts</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sys_script_include_48ae761d1b8a65104f1aba618b4bcbc0</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-07-08 09:28:24</sys_updated_on>
+    </sys_script_include>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</claim_owner_scope>
+        <claim_timestamp>197e95d39e90000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_48ae761d1b8a65104f1aba618b4bcbc0</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Developer Program</previous_claim_name>
+        <previous_claim_scope>c976a39d8360ea50e12fb9f6feaad347</previous_claim_scope>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-07-08 09:28:10</sys_created_on>
+        <sys_id>1d6f92ee836e2e10cb2d15a6feaad3f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-07-08 09:28:10</sys_updated_on>
+    </sys_claim>
+</record_update>

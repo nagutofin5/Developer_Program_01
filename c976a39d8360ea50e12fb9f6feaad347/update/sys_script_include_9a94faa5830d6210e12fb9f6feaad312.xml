@@ -5,7 +5,7 @@
         <api_name>global.glide_record_functions</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
-        <description>This script include contains generic and universal usage of scripts which helps in reducing creating multiple functions</description>
+        <description>This script includes general and universal script usage, which aids in minimizing the need to create multiple functions.</description>
         <mobile_callable>false</mobile_callable>
         <name>glide_record_functions</name>
         <sandbox_callable>false</sandbox_callable>
@@ -14,9 +14,9 @@ glide_record_functions.prototype = {
     initialize: function() {},
 
     /*  Description: Fetch single record value with all fields
-    	Input Value: Table Name and Encoded Query
-    	Output Value: single record with all fields value in JSON format
-    */
+		Input Value: Table Name and Encoded Query
+		Output Value: single record with all fields value in JSON format
+	*/
     getSingleRecord: function( /*Mandatory*/ tableName, /*Mandatory*/ encodedQuery) {
         var tableObject = {};
         var gr, grU, tableFields, i, rowCount = 0;
@@ -36,6 +36,30 @@ glide_record_functions.prototype = {
             tableObject['row_count'] = rowCount;
         }
         return JSON.stringify(tableObject);
+    },
+
+
+    /*  Description: Fetch multiple record value with all fields
+		Input Value: Table Name and Encoded Query
+		Output Value: single record with all fields value in JSON format
+	*/
+    getMultipleRecords: function( /*Mandatory*/ tableName, /*Mandatory*/ encodedQuery) {
+        var tableObject = {};
+        var tableRecords = [];
+        var gr, grU, tableFields, i;
+        gr = new GlideRecord(tableName);
+        gr.addEncodedQuery(encodedQuery);
+        gr.query();
+        while (gr._next()) {
+            tableObject = {};
+            grU = new GlideRecordUtil();
+            tableFields = grU.getFields(gr);
+            for (i = 0; i < tableFields.length; i++) {
+                tableObject[tableFields[i]] = gr.getValue(tableFields[i]);
+            }
+            tableRecords.push(tableObject);
+        }
+        return JSON.stringify(tableRecords);
     },
 
 
@@ -95,7 +119,6 @@ glide_record_functions.prototype = {
         }
         return JSON.stringify(tableRecords);
     },
-
 
     /*  Description: Fetch variable type
         	Input Value: Encoded Query
@@ -190,20 +213,187 @@ glide_record_functions.prototype = {
         }
     },
 
+
+    /*  Description: Get property value
+    	Input Value: Property name
+    	Output Value: Property value
+    */
+    getProperty: function( /*Mandatory*/ propertyName) {
+        return gs.getProperty(propertyName);
+    },
+
+
+    /*  Description: Execute Subflow "Manage MFA Group Membership"
+		Input Value: Group Name (MFA Group), Member (to add), Operation (Add or Remove)
+		Output Value: Result (Success or Error)
+		Info:	Flow inputs are configured as optional, to get proper output please pass all values
+	*/
+    triggerMFASubflow: function(groupName, member, operation, requestor) {
+        try {
+            //Set sub flow input values
+            var inputs = {};
+            inputs['requestor'] = requestor; // GlideRecord of table: sys_user
+            inputs['group_name'] = groupName; // String 
+            inputs['member'] = member; // String 
+            inputs['operation'] = operation; // Choice 
+
+            // Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
+            // sn_fd.FlowAPI.getRunner().subflow('global.manage_mfa_ad_group_membership').inBackground().withInputs(inputs).run();
+
+            // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+            var result = sn_fd.FlowAPI.getRunner().subflow('global.manage_mfa_ad_group_membership').inForeground().withInputs(inputs).run();
+            var outputs = result.getOutputs();
+
+            // Get Outputs:
+            // Note: outputs can only be retrieved when executing synchronously.
+            result = outputs['result']; // Choice
+
+        } catch (ex) {
+            var message = ex.getMessage();
+            gs.error(message);
+        }
+        return result.toString();
+    },
+
+
+    /*  Description: Update a table record by overriding Data Policies
+    	Input Value: Table name, Encoded Query and Strigify JSON data (key should be field name attribute and value)
+    	Output Value: Result (Success or Error)
+		E.g: overrideDataPolicies('problem','sys_id=3877c2fb1ba0b5906e15c9543b4bcbd8', {'state':'101','urgency':'3'})
+    */
+    overrideDataPolicies: function(tableName /* Mandatory */ , encodedQuery /* Mandatory */ , jsonData /* Mandatory */ ) {
+        var keyValues = jsonData;
+        var grTable = new GlideRecord(tableName);
+        grTable.addEncodedQuery(encodedQuery);
+        grTable.query();
+        var fields = '';
+        while (grTable._next()) {
+            for (var key in keyValues) {
+                if (gs.nil(fields)) {
+                    fields = grTable.setValue(key, keyValues[key]);
+                } else {
+                    fields = fields + grTable.setValue(key, keyValues[key]);
+                }
+            }
+            grTable.setUseEngines(false); //Method used to override from scoped applications
+            var result = grTable.update();
+            return result;
+        }
+    },
+
+
+    /*  Description: Return aggregations
+    	Input Value: Table name, Encoded Query, Aggregate and GroupBy(should be field name attribute)
+    	Output Value: JSON object of aggregation performed
+		E.g: getAggregation('incident','active=true', 'COUNT', 'priority')
+    */
+    getAggregation: function(table, query, aggregate /*SUM,AVG,COUNT ETC*/ , groupBy /*field name*/ ) {
+
+        var obj = {};
+        if (table && query) {
+            var agr = new GlideAggregate(table);
+            if (query) {
+                agr.addEncodedQuery(query);
+            }
+            if (groupBy) {
+                agr.groupBy(groupBy);
+            }
+            agr.addAggregate(aggregate, 'sys_mod_count');
+            agr.query();
+            while (agr.next()) {
+                if (groupBy) {
+                    obj[agr.getDisplayValue(groupBy)] = agr.getAggregate(aggregate, 'sys_mod_count');
+                } else
+                    obj[aggregate] = agr.getAggregate(aggregate, 'sys_mod_count');
+            }
+            obj[aggregate] = agr.getTotal(aggregate, 'sys_mod_count');
+            return JSON.stringify(obj);
+        } else return null;
+
+    },
+
+
+    /*	Description: Restricting the access of secured incidents on ServiceNow platform 
+    	Inputs:	Record SysID and logged in user SysID
+    	Output:	True / False
+    */
+    isAllowedToReadSecurityIncident: function(recordSysID, loggedInUser) {
+
+        var grIncident, assignmentGroup, grIncidentTask, taskAssignmentGroup, logger, watchListUsers, watchlistUser = false,
+            incTaskMember = false,
+            workNotesUsers, workNotesUser = false;
+
+        /* Fetch incident assignment group info */
+        grIncident = new GlideRecord('incident');
+        grIncident.addEncodedQuery('sys_id=' + recordSysID);
+        grIncident.query();
+        if (grIncident._next()) {
+            assignmentGroup = grIncident.assignment_group;
+            logger = grIncident.caller_id;
+            watchListUsers = grIncident.watch_list;
+            workNotesUsers = grIncident.work_notes_list;
+        }
+
+        /* Fetch incident task assignment group info */
+        grIncidentTask = new GlideRecord('incident_task');
+        grIncidentTask.addEncodedQuery('incident.sys_id=' + recordSysID);
+        grIncidentTask.query();
+        while (grIncidentTask._next()) {
+            taskAssignmentGroup = grIncidentTask.assignment_group;
+            if (gs.getUser().isMemberOf(taskAssignmentGroup)) {
+                incTaskMember = true;
+                break;
+            }
+        }
+
+        /* Fetch watch list user details from secured incident */
+        if (watchListUsers.indexOf(gs.getUserID()) > -1) {
+            watchlistUser = true;
+        }
+
+        /* Fetch work notes list user details from secured incident */
+        if (workNotesUsers.indexOf(gs.getUserID()) > -1) {
+            workNotesUser = true;
+        }
+
+        /* Does the logged-in user possess the "Security Incident Manager" role? */
+        if (gs.hasRole('security_incident_manager')) {
+            return true;
+        } /* Is the user a member of the assignment group associated with the incident? */
+        else if (gs.getUser().isMemberOf(assignmentGroup)) {
+            return true;
+        } /* Is the user a member of the assignment group associated with the incident task? */
+        else if (incTaskMember) {
+            return true;
+        } /* Is the user a logger of the secured incident? */
+        else if (logger == gs.getUserID()) {
+            return true;
+        } /* Is the user account included in the secured incident watch_list bucket? */
+        else if (watchlistUser) {
+            return true;
+        } /* Is the user account included in the secured incident work_notes_list bucket? */
+        /*else if (workNotesUser) {
+            return true;
+        }*/
+        else {
+            return false;
+        }
+    },
+
     type: 'glide_record_functions'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>surya_snow</sys_created_by>
         <sys_created_on>2025-04-21 18:56:31</sys_created_on>
         <sys_id>9a94faa5830d6210e12fb9f6feaad312</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>glide_record_functions</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
         <sys_update_name>sys_script_include_9a94faa5830d6210e12fb9f6feaad312</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-04-21 18:56:31</sys_updated_on>
+        <sys_updated_on>2025-07-08 09:29:38</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>9a94faa5830d6210e12fb9f6feaad312</id>

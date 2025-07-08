@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description>Now you can get all independent (or not independent) countries by calling this endpoint</description>
+        <name>GET Countries Script</name>
+        <record_for_rollback>true</record_for_rollback>
+        <script><![CDATA[var apiResponse = getAllCountries();
+gs.info(apiResponse);
+
+function getAllCountries() {
+    try {
+        var r = new sn_ws.RESTMessageV2('global.GET Countries', 'Default GET');
+        r.setStringParameterNoEscape('var1', 'independent');
+
+        var response = r.execute();
+        var responseBody = response.getBody();
+        var httpStatusCode = response.getStatusCode();
+        return responseBody;
+    } catch (ex) {
+        var message = ex.message;
+        return message;
+    }
+}]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-07-06 16:28:01</sys_created_on>
+        <sys_id>de3ce1ca83a2aa10cb2d15a6feaad3fc</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>GET Countries Script</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sys_script_fix_de3ce1ca83a2aa10cb2d15a6feaad3fc</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-07-06 16:42:20</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>de3ce1ca83a2aa10cb2d15a6feaad3fc</id>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-07-06 16:28:01</sys_created_on>
+        <sys_id>bf4ce94a83a2aa10cb2d15a6feaad3cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-07-06 16:28:01</sys_updated_on>
+        <table>sys_script_fix</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
