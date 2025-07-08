@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="sys_dictionary" version="2" view="advanced">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Dictionary Entry - Advanced" name="sys_dictionary" related_list="NULL" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">e83d53ea83a26e10cb2d15a6feaad301</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>REL:a403d812eb321100d4360c505206fe52</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-07-08 13:58:11</sys_created_on>
+            <sys_id>e43d53ea83a26e10cb2d15a6feaad303</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-07-08 13:58:11</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Dictionary Entry - Advanced" name="sys_dictionary" related_list="NULL" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">e83d53ea83a26e10cb2d15a6feaad301</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>REL:9355cd9b0a000704053ea63b163e74b9</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-07-08 13:58:11</sys_created_on>
+            <sys_id>203d53ea83a26e10cb2d15a6feaad304</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-07-08 13:58:11</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Dictionary Entry - Advanced" name="sys_dictionary" related_list="NULL" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">e83d53ea83a26e10cb2d15a6feaad301</list_id>
+            <order_by/>
+            <position>2</position>
+            <related_list>sys_schema_attribute_m2m.schema</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-07-08 13:58:11</sys_created_on>
+            <sys_id>a43d93ee83a26e10cb2d15a6feaad337</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-07-08 13:58:11</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Dictionary Entry - Advanced" name="sys_dictionary" related_list="NULL" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">e83d53ea83a26e10cb2d15a6feaad301</list_id>
+            <order_by/>
+            <position>3</position>
+            <related_list>REL:936d24940a0007040df60be53657a3db</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-07-08 13:58:11</sys_created_on>
+            <sys_id>a83d93ee83a26e10cb2d15a6feaad337</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-07-08 13:58:11</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Dictionary Entry - Advanced" name="sys_dictionary" related_list="NULL" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">e83d53ea83a26e10cb2d15a6feaad301</list_id>
+            <order_by/>
+            <position>4</position>
+            <related_list>REL:aa6e720d0a0a0b8c000f785922ec5f96</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-07-08 13:58:11</sys_created_on>
+            <sys_id>ac3d93ee83a26e10cb2d15a6feaad337</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-07-08 13:58:11</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Dictionary Entry - Advanced" name="sys_dictionary" related_list="NULL" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">e83d53ea83a26e10cb2d15a6feaad301</list_id>
+            <order_by/>
+            <position>5</position>
+            <related_list>REL:67bdac52374010008687ddb1967334ee</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-07-08 13:58:11</sys_created_on>
+            <sys_id>a03d93ee83a26e10cb2d15a6feaad338</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-07-08 13:58:11</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Dictionary Entry - Advanced</calculated_name>
+            <filter/>
+            <name>sys_dictionary</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2025-07-08 13:58:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e83d53ea83a26e10cb2d15a6feaad301</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Dictionary Entry - Advanced</sys_name>
+            <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+            <sys_update_name>sys_ui_related_sys_dictionary_advanced</sys_update_name>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2025-07-08 13:58:11</sys_updated_on>
+            <sys_user/>
+            <view display_value="Advanced" name="advanced">7966be310a0a0b8c00bd504090503227</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>
