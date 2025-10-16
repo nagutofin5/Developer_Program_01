@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table">
+    <sys_db_view_table action="DELETE">
+        <active>true</active>
+        <left_join>false</left_join>
+        <order>200</order>
+        <sys_class_name>sys_db_view_table</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-10-16 17:57:30</sys_created_on>
+        <sys_id>2ad213fe83e8be10a14ac296feaad3ec</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>sys_user</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sys_db_view_table_2ad213fe83e8be10a14ac296feaad3ec</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-10-16 17:59:35</sys_updated_on>
+        <table>sys_user</table>
+        <variable_prefix>usr</variable_prefix>
+        <view display_value="u_group_user_relationship_view">63ffc3be8328be10a14ac296feaad33d</view>
+        <where_clause>grmember.user="506c0f9cd7011200f2d224837e61030f"</where_clause>
+    </sys_db_view_table>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</application>
+        <file_path/>
+        <instance_id>e98fdd2b1b86355419254089bd4bcbee</instance_id>
+        <instance_name>dev197335</instance_name>
+        <name>sys_db_view_table_2ad213fe83e8be10a14ac296feaad3ec</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table"><sys_db_view_table action="INSERT_OR_UPDATE"><active>true</active><left_join>false</left_join><order>200</order><sys_class_name>sys_db_view_table</sys_class_name><sys_created_by>surya_snow</sys_created_by><sys_created_on>2025-10-16 17:57:30</sys_created_on><sys_id>2ad213fe83e8be10a14ac296feaad3ec</sys_id><sys_mod_count>2</sys_mod_count><sys_name>sys_user</sys_name><sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package><sys_policy/><sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope><sys_update_name>sys_db_view_table_2ad213fe83e8be10a14ac296feaad3ec</sys_update_name><sys_updated_by>surya_snow</sys_updated_by><sys_updated_on>2025-10-16 17:59:35</sys_updated_on><table>sys_user</table><variable_prefix>usr</variable_prefix><view display_value="u_group_user_relationship_view">63ffc3be8328be10a14ac296feaad33d</view><where_clause>grmember.user="506c0f9cd7011200f2d224837e61030f"</where_clause></sys_db_view_table></record_update>]]></payload>
+        <payload_hash>1623632422</payload_hash>
+        <record_name>sys_user</record_name>
+        <reverted_from/>
+        <source>edb6f3558396ae10a14ac296feaad30d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-10-16 17:59:35</sys_created_on>
+        <sys_id>bf635ffe83e8be10a14ac296feaad3b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>199ee2d61790000001</sys_recorded_at>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-10-16 17:59:35</sys_updated_on>
+        <type>View Table</type>
+        <update_guid>37635ffed1e8be10e24ee94a96bd39b8</update_guid>
+        <update_guid_history>37635ffed1e8be10e24ee94a96bd39b8:1623632422,5f335bfe3ee8be10f98c31eb00f3968d:1524945733,c5f293fe4ae8be10d027a7e0b511ab98:-1543894303</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-10-16 18:00:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_view_table">sys_db_view_table</sys_db_object>
+        <sys_id>2ea57ef5963441c29a0186bf1b4e3501</sys_id>
+        <sys_metadata>2ad213fe83e8be10a14ac296feaad3ec</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sys_user</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_parent display_value="u_group_user_relationship_view">63ffc3be8328be10a14ac296feaad33d</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_scope_delete display_value="">0ecaa3e6c2e6492e817255763b831929</sys_scope_delete>
+        <sys_update_name>sys_db_view_table_2ad213fe83e8be10a14ac296feaad3ec</sys_update_name>
+        <sys_update_version display_value="sys_db_view_table_2ad213fe83e8be10a14ac296feaad3ec">bf635ffe83e8be10a14ac296feaad3b8</sys_update_version>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-10-16 18:00:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

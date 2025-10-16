@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table_field">
+    <sys_db_view_table_field action="DELETE">
+        <field>manager</field>
+        <sys_class_name>sys_db_view_table_field</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-10-16 17:50:59</sys_created_on>
+        <sys_id>3661973e83e8be10a14ac296feaad30f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>manager</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sys_db_view_table_field_3661973e83e8be10a14ac296feaad30f</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-10-16 17:50:59</sys_updated_on>
+        <table>sys_user_group</table>
+        <view_table display_value="sys_user_group">1a509bfa83e8be10a14ac296feaad351</view_table>
+    </sys_db_view_table_field>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</application>
+        <file_path/>
+        <instance_id>e98fdd2b1b86355419254089bd4bcbee</instance_id>
+        <instance_name>dev197335</instance_name>
+        <name>sys_db_view_table_field_3661973e83e8be10a14ac296feaad30f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table_field"><sys_db_view_table_field action="INSERT_OR_UPDATE"><field>manager</field><sys_class_name>sys_db_view_table_field</sys_class_name><sys_created_by>surya_snow</sys_created_by><sys_created_on>2025-10-16 17:50:59</sys_created_on><sys_id>3661973e83e8be10a14ac296feaad30f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>manager</sys_name><sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package><sys_policy/><sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope><sys_update_name>sys_db_view_table_field_3661973e83e8be10a14ac296feaad30f</sys_update_name><sys_updated_by>surya_snow</sys_updated_by><sys_updated_on>2025-10-16 17:50:59</sys_updated_on><table>sys_user_group</table><view_table display_value="sys_user_group">1a509bfa83e8be10a14ac296feaad351</view_table></sys_db_view_table_field></record_update>]]></payload>
+        <payload_hash>-1234342533</payload_hash>
+        <record_name>manager</record_name>
+        <reverted_from/>
+        <source>edb6f3558396ae10a14ac296feaad30d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-10-16 17:50:59</sys_created_on>
+        <sys_id>3571937e83e8be10a14ac296feaad38c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>199ee2580a80000001</sys_recorded_at>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-10-16 17:50:59</sys_updated_on>
+        <type>View Field</type>
+        <update_guid>3971937effe8be10f1cef2f7fa3a4c8b</update_guid>
+        <update_guid_history>3971937effe8be10f1cef2f7fa3a4c8b:-1234342533</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-10-16 17:53:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_view_table_field">sys_db_view_table_field</sys_db_object>
+        <sys_id>0de00fb9cb1845af848ecaf074e70709</sys_id>
+        <sys_metadata>3661973e83e8be10a14ac296feaad30f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>manager</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_parent display_value="sys_user_group">1a509bfa83e8be10a14ac296feaad351</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_scope_delete display_value="">0ecaa3e6c2e6492e817255763b831929</sys_scope_delete>
+        <sys_update_name>sys_db_view_table_field_3661973e83e8be10a14ac296feaad30f</sys_update_name>
+        <sys_update_version display_value="sys_db_view_table_field_3661973e83e8be10a14ac296feaad30f">3571937e83e8be10a14ac296feaad38c</sys_update_version>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-10-16 17:53:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

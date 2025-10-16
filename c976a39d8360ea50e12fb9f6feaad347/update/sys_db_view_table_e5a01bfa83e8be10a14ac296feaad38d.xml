@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table">
+    <sys_db_view_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <left_join>false</left_join>
+        <order>200</order>
+        <sys_class_name>sys_db_view_table</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-10-16 17:48:30</sys_created_on>
+        <sys_id>e5a01bfa83e8be10a14ac296feaad38d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>sys_user_grmember</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sys_db_view_table_e5a01bfa83e8be10a14ac296feaad38d</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-10-16 18:00:43</sys_updated_on>
+        <table>sys_user_grmember</table>
+        <variable_prefix>grmember</variable_prefix>
+        <view display_value="u_group_user_relationship_view">63ffc3be8328be10a14ac296feaad33d</view>
+        <where_clause>grp.sys_id=grmember.group</where_clause>
+    </sys_db_view_table>
+</record_update>
