@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_soap_message">
+    <sys_soap_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type/>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description>API provides sample services such as a list of continents ordered by name and a list of countries sorted by name.</description>
+        <download_wsdl>true</download_wsdl>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <name>List of Countries</name>
+        <protocol_profile/>
+        <sys_class_name>sys_soap_message</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-11-15 14:05:41</sys_created_on>
+        <sys_id>503dbca883113a10a14ac296feaad3e3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>List of Countries</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sys_soap_message_503dbca883113a10a14ac296feaad3e3</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-11-15 14:06:31</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <wsdl>https://soap-service-free.mock.beeceptor.com/CountryInfoService?WSDL</wsdl>
+        <wsdl_xml><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="https://soap-service-free.mock.beeceptor.com/CountryInfoService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://soap-service-free.mock.beeceptor.com/CountryInfoService">
+    <wsdl:types>
+        <xsd:schema targetNamespace="https://soap-service-free.mock.beeceptor.com/CountryInfoService">
+            <xsd:element name="ListOfContinentsByName" type="tns:ListOfContinentsByNameType"/>
+            <xsd:element name="ListOfContinentsByNameResponse" type="tns:ListOfContinentsByNameResponseType"/>
+            <xsd:element name="ListOfCountryNamesByName" type="tns:ListOfCountryNamesByNameType"/>
+            <xsd:element name="ListOfCountryNamesByNameResponse" type="tns:ListOfCountryNamesByNameResponseType"/>
+            <xsd:complexType name="ListOfContinentsByNameType"/>
+            <xsd:complexType name="ListOfContinentsByNameResponseType">
+                <xsd:sequence>
+                    <xsd:element name="ListOfContinentsByNameResult" type="tns:ArrayOfContinents"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ListOfCountryNamesByNameType"/>
+            <xsd:complexType name="ListOfCountryNamesByNameResponseType">
+                <xsd:sequence>
+                    <xsd:element name="ListOfCountryNamesByNameResult" type="tns:ArrayOfCountryNames"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ArrayOfContinents">
+                <xsd:sequence>
+                    <xsd:element name="tContinent" type="tns:Continent" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ArrayOfCountryNames">
+                <xsd:sequence>
+                    <xsd:element name="tCountryCodeAndName" type="tns:CountryCodeAndName" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="Continent">
+                <xsd:sequence>
+                    <xsd:element name="sCode" type="xsd:string"/>
+                    <xsd:element name="sName" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="CountryCodeAndName">
+                <xsd:sequence>
+                    <xsd:element name="sISOCode" type="xsd:string"/>
+                    <xsd:element name="sName" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="ListOfContinentsByNameRequest">
+        <wsdl:part name="parameters" element="tns:ListOfContinentsByName"/>
+    </wsdl:message>
+    <wsdl:message name="ListOfContinentsByNameResponse">
+        <wsdl:part name="parameters" element="tns:ListOfContinentsByNameResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ListOfCountryNamesByNameRequest">
+        <wsdl:part name="parameters" element="tns:ListOfCountryNamesByName"/>
+    </wsdl:message>
+    <wsdl:message name="ListOfCountryNamesByNameResponse">
+        <wsdl:part name="parameters" element="tns:ListOfCountryNamesByNameResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="CountryInfoPortType">
+        <wsdl:operation name="ListOfContinentsByName">
+            <wsdl:input message="tns:ListOfContinentsByNameRequest"/>
+            <wsdl:output message="tns:ListOfContinentsByNameResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="ListOfCountryNamesByName">
+            <wsdl:input message="tns:ListOfCountryNamesByNameRequest"/>
+            <wsdl:output message="tns:ListOfCountryNamesByNameResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="CountryInfoBinding" type="tns:CountryInfoPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="ListOfContinentsByName">
+            <soap:operation soapAction="https://soap-service-free.mock.beeceptor.com/CountryInfoService.wso/ListOfContinentsByName"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ListOfCountryNamesByName">
+            <soap:operation soapAction="https://soap-service-free.mock.beeceptor.com/CountryInfoService.wso/ListOfCountryNamesByName"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="CountryInfoService">
+        <wsdl:port name="CountryInfoPort" binding="tns:CountryInfoBinding">
+            <soap:address location="https://soap-service-free.mock.beeceptor.com/CountryInfoService.wso"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
+]]></wsdl_xml>
+    </sys_soap_message>
+</record_update>

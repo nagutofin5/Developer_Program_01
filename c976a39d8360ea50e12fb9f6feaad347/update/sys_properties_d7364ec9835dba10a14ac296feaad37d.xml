@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>ServiceNow's default parsing limit is 65,536 characters. This property is used to increase that default value.</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>com.glide.transform.json.max-partial-length</name>
+        <read_roles/>
+        <suffix>com.snc.process_flow.reporting.serialized.val_size_limit</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-11-17 08:41:38</sys_created_on>
+        <sys_id>d7364ec9835dba10a14ac296feaad37d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>com.glide.transform.json.max-partial-length</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sys_properties_d7364ec9835dba10a14ac296feaad37d</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-11-17 17:58:07</sys_updated_on>
+        <type>string</type>
+        <value>65536</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=d7364ec9835dba10a14ac296feaad37d"/>
+</record_update>

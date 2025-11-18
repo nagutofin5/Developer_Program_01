@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Insert Record</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var requestBody = request.body.data;
+    var countryName = requestBody.countryName;
+    var htmlSummaryEN = requestBody.htmlSummaryEN;
+    var decodedString = new GlideStringUtil().unEscapeHTML(htmlSummaryEN);
+    var countryGR = new GlideRecord('u_countries');
+    countryGR.initialize();
+    countryGR.u_country_name = countryName;
+    countryGR.u_nation_famous_for = decodedString;
+    var responseObj = countryGR.insert();
+    response.body = JSON.stringify(responseObj);
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/1784518/countries_api/createCountry</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/createCountry</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-11-17 17:24:12</sys_created_on>
+        <sys_id>23ed33c183d5fa10a14ac296feaad3a5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Insert Record</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sys_ws_operation_23ed33c183d5fa10a14ac296feaad3a5</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-11-17 17:45:51</sys_updated_on>
+        <web_service_definition display_value="Countries API">8aad7b8183d5fa10a14ac296feaad394</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>23ed33c183d5fa10a14ac296feaad3a5</id>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-11-17 17:24:11</sys_created_on>
+        <sys_id>093e33498395fa10a14ac296feaad3d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-11-17 17:24:11</sys_updated_on>
+        <table>sys_ws_operation</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
