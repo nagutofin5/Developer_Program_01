@@ -63,62 +63,95 @@ glide_record_functions.prototype = {
     },
 
 
-    /*  Description: Get table record(s) value with all or specific fields
-    	Input Value: Table Name, Encoded Query and Specific Fields
-    	Output Value: Record(s) with all or specific fields value in JSON format
+    /***********************************************************************************************************/
+    /*  
+		Description		--->	Obtain the value of a table record or records with all or some fields
+    	Input Value		--->	Table Name, Encoded Query, Specific Fields and Row Limit
+    	Output Value	--->	JSON-formatted record or records having all or some of the fields' values
     */
-    getTableRecords: function( /*Mandatory*/ tableName, /*Mandatory*/ encodedQuery, /*Optional*/ specificFields) {
-        specificFields = specificFields.trim();
+    getTableRecords: function( /*Mandatory*/ tableName, /*Mandatory*/ encodedQuery, /*Optional*/ rowLimit, /*Optional*/ specificFields) {
+
+        //Define variables
         var tableObject = {};
         var tableRecords = [];
-        var gr, requiredFields, tableFields, i, dictionaryEncodeQuery, variableType, addDisplay = '';
+        var variableTypesForDisplay = ['reference', 'glide_list', 'integer'];
+        var glideRecord, glideRecordUtil, requiredField, requiredFields = '',
+            tableFields, tableField, i, dictionaryEncodeQuery, variableType, addDisplay = '',
+            regex = /[1-9]+/;
+
+        if (rowLimit != 0 && !gs.nil(rowLimit)) {
+            if (!regex.test(rowLimit)) {
+                rowLimit = '';
+            }
+        }
+
         if (!gs.nil(specificFields)) {
             requiredFields = specificFields.toString().split(',');
         }
-        gr = new GlideRecord(tableName);
-        gr.addEncodedQuery(encodedQuery);
-        gr.query();
-        while (gr._next()) {
+
+        //Query table
+        glideRecord = new GlideRecord(tableName);
+        glideRecord.addEncodedQuery(encodedQuery);
+        if (rowLimit != 0 && !gs.nil(rowLimit)) {
+            glideRecord.setLimit(rowLimit);
+        }
+        glideRecord.query();
+
+        while (glideRecord._next()) {
             tableObject = {};
-            if ((requiredFields.length != 0) && (specificFields != '')) {
+
+            if ((requiredFields.length != 0) && (!gs.nil(specificFields))) {
+
                 //Loop through each required fields
                 for (i = 0; i < requiredFields.length; i++) {
-                    if (!gs.nil(requiredFields[i])) {
+                    requiredField = requiredFields[i].trim();
+
+                    if (!gs.nil(requiredField)) {
                         addDisplay = '';
+
                         //Fetch Field Type
-                        dictionaryEncodeQuery = 'name=' + tableName + '^element=' + requiredFields[i];
-                        variableType = new global.glide_record_functions().fetchFieldType(dictionaryEncodeQuery); //List Collector: glide_list, Reference: reference
-                        if (variableType == 'reference' || variableType == 'glide_list') {
-                            addDisplay = requiredFields[i] + '_name';
-                            tableObject[requiredFields[i]] = gr.getValue(requiredFields[i]); //Stores sys id
-                            tableObject[addDisplay] = gr.getDisplayValue(requiredFields[i]); //Stores display value of reference filed
+                        dictionaryEncodeQuery = 'name=' + tableName + '^element=' + requiredField;
+                        variableType = this.fetchFieldType(dictionaryEncodeQuery); //List Collector: glide_list, Reference: reference
+
+                        if (variableTypesForDisplay.indexOf(variableType) != -1) {
+                            addDisplay = requiredField + '_name';
+                            tableObject[requiredField] = glideRecord.getValue(requiredField); //Stores sys id
+                            tableObject[addDisplay] = glideRecord.getDisplayValue(requiredField); //Stores display value of reference filed
                         } else {
-                            tableObject[requiredFields[i]] = gr.getValue(requiredFields[i]);
+                            tableObject[requiredField] = glideRecord.getValue(requiredField);
                         }
                     }
                 }
             } else {
-                grU = new GlideRecordUtil();
-                tableFields = grU.getFields(gr);
+
+                glideRecordUtil = new global.GlideRecordUtil();
+                tableFields = glideRecordUtil.getFields(glideRecord);
+
                 //Loop through all fields
                 for (i = 0; i < tableFields.length; i++) {
                     addDisplay = '';
+                    tableField = tableFields[i].trim();
+
                     //Fetch Field Type
-                    dictionaryEncodeQuery = 'name=' + tableName + '^element=' + tableFields[i];
-                    variableType = new global.glide_record_functions().fetchFieldType(dictionaryEncodeQuery); //List Collector: glide_list, Reference: reference
-                    if (variableType == 'reference' || variableType == 'glide_list') {
-                        addDisplay = tableFields[i] + '_name';
-                        tableObject[tableFields[i]] = gr.getValue(tableFields[i]); //Stores sys id
-                        tableObject[addDisplay] = gr.getDisplayValue(tableFields[i]); //Stores display value of reference filed
+                    dictionaryEncodeQuery = 'name=' + tableName + '^element=' + tableField;
+                    variableType = this.fetchFieldType(dictionaryEncodeQuery); //List Collector: glide_list, Reference: reference
+
+                    if (variableTypesForDisplay.indexOf(variableType) != -1) {
+                        addDisplay = tableField + '_name';
+                        tableObject[tableField] = glideRecord.getValue(tableField); //Stores sys id
+                        tableObject[addDisplay] = glideRecord.getDisplayValue(tableField); //Stores display value of reference filed
                     } else {
-                        tableObject[tableFields[i]] = gr.getValue(tableFields[i]);
+                        tableObject[tableField] = glideRecord.getValue(tableField);
                     }
                 }
             }
             tableRecords.push(tableObject);
         }
+
         return JSON.stringify(tableRecords);
     },
+    /***********************************************************************************************************/
+
 
     /*  Description: Fetch variable type
         	Input Value: Encoded Query
@@ -386,14 +419,14 @@ glide_record_functions.prototype = {
         <sys_created_by>surya_snow</sys_created_by>
         <sys_created_on>2025-04-21 18:56:31</sys_created_on>
         <sys_id>9a94faa5830d6210e12fb9f6feaad312</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>glide_record_functions</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
         <sys_update_name>sys_script_include_9a94faa5830d6210e12fb9f6feaad312</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-07-08 09:29:38</sys_updated_on>
+        <sys_updated_on>2025-12-30 09:33:24</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>9a94faa5830d6210e12fb9f6feaad312</id>
