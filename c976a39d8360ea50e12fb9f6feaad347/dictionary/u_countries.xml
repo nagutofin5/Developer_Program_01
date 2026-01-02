@@ -3,9 +3,5 @@
         <element label="Nation famous for" max_length="8000" name="u_nation_famous_for" type="translated_html"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="u_number" type="string"/>
         <element display="true" label="Country Name" mandatory="true" max_length="100" name="u_country_name" type="string"/>
-        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
-        <index name="index">
-            <element name="sys_class_name"/>
-        </index>
     </element>
 </database>
