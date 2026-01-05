@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Create an Incident">cd5698cb83c67250a14ac296feaad378</sc_cat_item>
+        <sc_category display_value="Self-Services">7ffda66d83c96210e12fb9f6feaad3c0</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2025-12-30 12:39:52</sys_created_on>
+        <sys_id>67791003830a7250a14ac296feaad30c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Self-Services.Create an Incident</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sc_cat_item_category_67791003830a7250a14ac296feaad30c</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2025-12-30 12:39:52</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>
