@@ -7,7 +7,7 @@
         <applies_sc_task>false</applies_sc_task>
         <applies_target_record>false</applies_target_record>
         <applies_to>item</applies_to>
-        <cat_item display_value="Request For Membership">f8aeee6d83c96210e12fb9f6feaad363</cat_item>
+        <cat_item display_value="Request for membership">f8aeee6d83c96210e12fb9f6feaad363</cat_item>
         <cat_variable>IO:3650be21830d6210e12fb9f6feaad396</cat_variable>
         <condition/>
         <description/>
