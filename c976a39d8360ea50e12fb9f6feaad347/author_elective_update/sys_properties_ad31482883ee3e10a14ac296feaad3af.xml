@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices/>
+        <description/>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>𝗴𝗹𝗶𝗱𝗲.𝘂𝗶.𝘁𝗲𝘅𝘁𝗮𝗿𝗲𝗮.𝗰𝗵𝗮𝗿𝗮𝗰𝘁𝗲𝗿_𝗰𝗼𝘂𝗻𝘁𝗲𝗿</name>
+        <read_roles/>
+        <suffix>����������.����.����������������.������������������_��������������</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2026-01-16 13:02:14</sys_created_on>
+        <sys_id>ad31482883ee3e10a14ac296feaad3af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>𝗴𝗹𝗶𝗱𝗲.𝘂𝗶.𝘁𝗲𝘅𝘁𝗮𝗿𝗲𝗮.𝗰𝗵𝗮𝗿𝗮𝗰𝘁𝗲𝗿_𝗰𝗼𝘂𝗻𝘁𝗲𝗿</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sys_properties_ad31482883ee3e10a14ac296feaad3af</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2026-01-16 13:02:14</sys_updated_on>
+        <type>string</type>
+        <value>true</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="DELETE" query="documentkey=ad31482883ee3e10a14ac296feaad3af"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</application>
+        <file_path/>
+        <instance_id>e98fdd2b1b86355419254089bd4bcbee</instance_id>
+        <instance_name>dev197335</instance_name>
+        <name>sys_properties_ad31482883ee3e10a14ac296feaad3af</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description/><ignore_cache>true</ignore_cache><is_private>false</is_private><name>]]>𝗴𝗹𝗶𝗱𝗲<![CDATA[.]]>𝘂𝗶<![CDATA[.]]>𝘁𝗲𝘅𝘁𝗮𝗿𝗲𝗮<![CDATA[.]]>𝗰𝗵𝗮𝗿𝗮𝗰𝘁𝗲𝗿<![CDATA[_]]>𝗰𝗼𝘂𝗻𝘁𝗲𝗿<![CDATA[</name><read_roles/><suffix>����������.����.����������������.������������������_��������������</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>surya_snow</sys_created_by><sys_created_on>2026-01-16 13:02:14</sys_created_on><sys_id>ad31482883ee3e10a14ac296feaad3af</sys_id><sys_mod_count>0</sys_mod_count><sys_name>]]>𝗴𝗹𝗶𝗱𝗲<![CDATA[.]]>𝘂𝗶<![CDATA[.]]>𝘁𝗲𝘅𝘁𝗮𝗿𝗲𝗮<![CDATA[.]]>𝗰𝗵𝗮𝗿𝗮𝗰𝘁𝗲𝗿<![CDATA[_]]>𝗰𝗼𝘂𝗻𝘁𝗲𝗿<![CDATA[</sys_name><sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package><sys_policy/><sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope><sys_update_name>sys_properties_ad31482883ee3e10a14ac296feaad3af</sys_update_name><sys_updated_by>surya_snow</sys_updated_by><sys_updated_on>2026-01-16 13:02:14</sys_updated_on><type>string</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=ad31482883ee3e10a14ac296feaad3af"/></record_update>]]></payload>
+        <payload_hash>-1520239147</payload_hash>
+        <record_name>𝗴𝗹𝗶𝗱𝗲.𝘂𝗶.𝘁𝗲𝘅𝘁𝗮𝗿𝗲𝗮.﷖</record_name>
+        <reverted_from/>
+        <source>edb6f3558396ae10a14ac296feaad30d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2026-01-16 13:02:14</sys_created_on>
+        <sys_id>0da188e483ee3e10a14ac296feaad315</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19bc6e637840000001</sys_recorded_at>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2026-01-16 13:02:14</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>01a188e42cee3e103a00d624e8a89015</update_guid>
+        <update_guid_history>01a188e42cee3e103a00d624e8a89015:-1520239147</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2026-01-16 13:03:53</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>5a60b1e5e8094fae9a10da21be3022c9</sys_id>
+        <sys_metadata>ad31482883ee3e10a14ac296feaad3af</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>𝗴𝗹𝗶𝗱𝗲.𝘂𝗶.𝘁𝗲𝘅𝘁𝗮𝗿𝗲𝗮.𝗰𝗵𝗮𝗿𝗮𝗰𝘁𝗲𝗿_𝗰𝗼𝘂𝗻𝘁𝗲𝗿</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_scope_delete display_value="">0ecaa3e6c2e6492e817255763b831929</sys_scope_delete>
+        <sys_update_name>sys_properties_ad31482883ee3e10a14ac296feaad3af</sys_update_name>
+        <sys_update_version display_value="sys_properties_ad31482883ee3e10a14ac296feaad3af">0da188e483ee3e10a14ac296feaad315</sys_update_version>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2026-01-16 13:03:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
