@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="all_tables.detail_row=short_description,all_tables.display_color=priority,all_tables.live_feed=true,all_tables.text_index_translations=true,extension_model=hierarchy,hasListeners=true,kagami_csindex_enabled=true,largeTable=true,reference_index_include=active" db_object_id="60309668c811221055906c7518aa2dc3" label="Task" max_length="40" name="task" text_index="true" type="collection">
+    <element attributes="all_tables.detail_row=short_description,all_tables.display_color=priority,all_tables.live_feed=true,all_tables.text_index_translations=true,extension_model=hierarchy,hasListeners=true,kagami_csindex_enabled=true,largeTable=true,reference_index_include=active" db_object_id="b0709778d00322105590fd9a5a77e757" label="Task" max_length="40" name="task" text_index="true" type="collection">
         <element label="Secured Record" max_length="40" name="u_secured_record" read_only="true" type="boolean"/>
     </element>
 </database>

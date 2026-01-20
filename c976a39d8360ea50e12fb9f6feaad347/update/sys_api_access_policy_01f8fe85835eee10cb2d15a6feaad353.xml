@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_api_access_policy">
     <sys_api_access_policy action="INSERT_OR_UPDATE">
         <active>true</active>
+        <all_authn_scheme_authenticate_header>false</all_authn_scheme_authenticate_header>
         <api>Table API</api>
         <api_path>now/table</api_path>
         <api_resource>/now/table/{tableName}</api_resource>

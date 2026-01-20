@@ -30,7 +30,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>74aefc2c83113a10a14ac296feaad306</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>List of Countries by Name</sys_name>
         <sys_overrides/>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
@@ -38,7 +38,7 @@
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_74aefc2c83113a10a14ac296feaad306</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-15 16:49:03</sys_updated_on>
+        <sys_updated_on>2025-12-30 09:47:34</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -82,12 +82,11 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <inputs/>
         <label>XML Parser step</label>
         <order>2</order>
         <outputs/>
         <section/>
-        <step_type display_value="XML Parser">34371337773223007b2380733b106170</step_type>
+        <step_type display_value="">34371337773223007b2380733b106170</step_type>
         <sys_created_by>surya_snow</sys_created_by>
         <sys_created_on>2025-11-15 15:10:53</sys_created_on>
         <sys_id>3c8c0de083913a10a14ac296feaad36e</sys_id>
@@ -1101,7 +1100,7 @@
         &lt;/m:ListOfCountryNamesByNameResponse&gt;&#13;
     &lt;/soap:Body&gt;&#13;
 &lt;/soap:Envelope&gt;</value>
-        <variable display_value="Sample payload">48ff5bb7773223007b2380733b10612c</variable>
+        <variable display_value="">48ff5bb7773223007b2380733b10612c</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -1115,7 +1114,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 15:10:53</sys_updated_on>
         <value>{"name":"Envelope","children":[{"name":"Body","children":[{"name":"ListOfCountryNamesByNameResponse","children":[{"name":"ListOfCountryNamesByNameResult","children":[{"name":"array_of_tCountryCodeAndName","children":[{"name":"tCountryCodeAndName","children":[{"name":"sISOCode","children":[],"type":"string","xpath":"/soap:Envelope/soap:Body/m:ListOfCountryNamesByNameResponse/m:ListOfCountryNamesByNameResult/m:tCountryCodeAndName/m:sISOCode","previewValue":"AX"},{"name":"sName","children":[],"type":"string","xpath":"/soap:Envelope/soap:Body/m:ListOfCountryNamesByNameResponse/m:ListOfCountryNamesByNameResult/m:tCountryCodeAndName/m:sName","previewValue":"Åland Islands"}],"type":"object","xpath":"/soap:Envelope/soap:Body/m:ListOfCountryNamesByNameResponse/m:ListOfCountryNamesByNameResult/m:tCountryCodeAndName","previewValue":""}],"type":"array.object","xpath":"/soap:Envelope/soap:Body/m:ListOfCountryNamesByNameResponse/m:ListOfCountryNamesByNameResult/m:tCountryCodeAndName","previewValue":""}],"type":"object","xpath":"/soap:Envelope/soap:Body/m:ListOfCountryNamesByNameResponse/m:ListOfCountryNamesByNameResult","previewValue":""}],"type":"object","xpath":"/soap:Envelope/soap:Body/m:ListOfCountryNamesByNameResponse","previewValue":""}],"type":"object","xpath":"/soap:Envelope/soap:Body","previewValue":""}],"type":"object","xpath":"/soap:Envelope","previewValue":""}</value>
-        <variable display_value="Target">13e1f5fd735b2300ab7931d7caf6a76b</variable>
+        <variable display_value="">13e1f5fd735b2300ab7931d7caf6a76b</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -1129,58 +1128,9 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 16:48:46</sys_updated_on>
         <value>raw</value>
-        <variable display_value="Payload view">96e7d737773223007b2380733b1061d9</variable>
+        <variable display_value="">96e7d737773223007b2380733b1061d9</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_3c8c0de083913a10a14ac296feaad36e^id=3c8c0de083913a10a14ac296feaad36e"/>
-    <sys_element_mapping action="delete_multiple" query="id=3c8c0de083913a10a14ac296feaad36e"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>payload_view</field>
-        <id>3c8c0de083913a10a14ac296feaad36e</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-15 15:10:53</sys_created_on>
-        <sys_id>388c0de083913a10a14ac296feaad37a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-15 15:10:53</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_34371337773223007b2380733b106170</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>sample_payload</field>
-        <id>3c8c0de083913a10a14ac296feaad36e</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-15 15:10:53</sys_created_on>
-        <sys_id>f88c0de083913a10a14ac296feaad37a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-15 15:10:53</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_34371337773223007b2380733b106170</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>source_data</field>
-        <id>3c8c0de083913a10a14ac296feaad36e</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-15 15:10:53</sys_created_on>
-        <sys_id>748c0de083913a10a14ac296feaad37a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-15 15:10:53</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_34371337773223007b2380733b106170</table>
-        <value>{{step[b621a37d-9baa-43f2-af45-167cb65c04b0].response_body}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>target_schema</field>
-        <id>3c8c0de083913a10a14ac296feaad36e</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-15 15:10:53</sys_created_on>
-        <sys_id>b08c0de083913a10a14ac296feaad37a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-15 15:10:53</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_34371337773223007b2380733b106170</table>
-        <value/>
-    </sys_element_mapping>
     <sys_translated_text action="delete_multiple" query="documentkey=3c8c0de083913a10a14ac296feaad36e"/>
     <sys_hub_step_ext_input action="delete_multiple" query="model=3c8c0de083913a10a14ac296feaad36e"/>
     <sys_hub_step_ext_output action="delete_multiple" query="model=3c8c0de083913a10a14ac296feaad36e^sys_idNOT INb48c0de083913a10a14ac296feaad372"/>
@@ -1304,11 +1254,11 @@
         <sys_created_on>2025-11-15 15:10:53</sys_created_on>
         <sys_id>748c0de083913a10a14ac296feaad375</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Envelope</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_3c8c0de083913a10a14ac296feaad36e_Envelope_en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 15:10:53</sys_updated_on>
         <url/>
@@ -1362,12 +1312,11 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <inputs/>
         <label>JSON Parser step</label>
         <order>3</order>
         <outputs/>
         <section/>
-        <step_type display_value="JSON Parser">502328c387523300f917e55936cb0bf0</step_type>
+        <step_type display_value="">502328c387523300f917e55936cb0bf0</step_type>
         <sys_created_by>surya_snow</sys_created_by>
         <sys_created_on>2025-11-15 15:14:41</sys_created_on>
         <sys_id>546d8d2483913a10a14ac296feaad349</sys_id>
@@ -1405,7 +1354,7 @@
 		}&#13;
 	}&#13;
 }</value>
-        <variable display_value="Sample payload">d335ac0787523300f917e55936cb0b1d</variable>
+        <variable display_value="">d335ac0787523300f917e55936cb0b1d</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -1419,46 +1368,9 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 15:14:41</sys_updated_on>
         <value>{"name":"root","children":[{"name":"Body","children":[{"name":"ListOfCountryNamesByNameResponse","children":[{"name":"ListOfCountryNamesByNameResult","children":[{"name":"array_of_tCountryCodeAndName","children":[{"name":"array_of_tCountryCodeAndName_object","children":[{"name":"sISOCode","children":[],"type":"string","jpath":"$.Body.ListOfCountryNamesByNameResponse.ListOfCountryNamesByNameResult.array_of_tCountryCodeAndName[*].sISOCode","previewValue":"AX"},{"name":"sName","children":[],"type":"string","jpath":"$.Body.ListOfCountryNamesByNameResponse.ListOfCountryNamesByNameResult.array_of_tCountryCodeAndName[*].sName","previewValue":"Åland Islands"}],"type":"object","jpath":"$.Body.ListOfCountryNamesByNameResponse.ListOfCountryNamesByNameResult.array_of_tCountryCodeAndName[*]","previewValue":""}],"type":"array.object","jpath":"$.Body.ListOfCountryNamesByNameResponse.ListOfCountryNamesByNameResult.array_of_tCountryCodeAndName[*]","previewValue":""}],"type":"object","jpath":"$.Body.ListOfCountryNamesByNameResponse.ListOfCountryNamesByNameResult","previewValue":""}],"type":"object","jpath":"$.Body.ListOfCountryNamesByNameResponse","previewValue":""}],"type":"object","jpath":"$.Body","previewValue":""}],"type":"object","jpath":"$","previewValue":""}</value>
-        <variable display_value="Target">4674240787523300f917e55936cb0b0e</variable>
+        <variable display_value="">4674240787523300f917e55936cb0b0e</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_546d8d2483913a10a14ac296feaad349^id=546d8d2483913a10a14ac296feaad349"/>
-    <sys_element_mapping action="delete_multiple" query="id=546d8d2483913a10a14ac296feaad349"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>sample_payload</field>
-        <id>546d8d2483913a10a14ac296feaad349</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-15 15:14:41</sys_created_on>
-        <sys_id>e86d8d2483913a10a14ac296feaad356</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-15 15:14:41</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>source_data</field>
-        <id>546d8d2483913a10a14ac296feaad349</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-15 15:14:41</sys_created_on>
-        <sys_id>286d8d2483913a10a14ac296feaad356</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-15 15:14:41</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
-        <value>{{step[91266c98-3a79-4f8e-9824-ebadbf21f2df].Envelope}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>target_schema</field>
-        <id>546d8d2483913a10a14ac296feaad349</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-15 15:14:41</sys_created_on>
-        <sys_id>646d8d2483913a10a14ac296feaad356</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-15 15:14:41</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
-        <value/>
-    </sys_element_mapping>
     <sys_translated_text action="delete_multiple" query="documentkey=546d8d2483913a10a14ac296feaad349"/>
     <sys_hub_step_ext_input action="delete_multiple" query="model=546d8d2483913a10a14ac296feaad349"/>
     <sys_hub_step_ext_output action="delete_multiple" query="model=546d8d2483913a10a14ac296feaad349^sys_idNOT IN6c6d8d2483913a10a14ac296feaad34d"/>
@@ -1582,11 +1494,11 @@
         <sys_created_on>2025-11-15 15:14:41</sys_created_on>
         <sys_id>2c6d8d2483913a10a14ac296feaad350</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>root</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_546d8d2483913a10a14ac296feaad349_root_en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 15:14:41</sys_updated_on>
         <url/>
@@ -1604,7 +1516,7 @@
         <order>1</order>
         <outputs/>
         <section/>
-        <step_type display_value="SOAP">6e61d40e73031300e6561afe2ff6a704</step_type>
+        <step_type display_value="">6e61d40e73031300e6561afe2ff6a704</step_type>
         <sys_created_by>surya_snow</sys_created_by>
         <sys_created_on>2025-11-15 14:15:36</sys_created_on>
         <sys_id>cbdf38ac83113a10a14ac296feaad399</sys_id>
@@ -1631,7 +1543,7 @@
       &lt;coun:ListOfCountryNamesByName/&gt;
    &lt;/soapenv:Body&gt;
 &lt;/soapenv:Envelope&gt;</value>
-        <variable display_value="SOAP Envelope">83735c4e73031300e6561afe2ff6a789</variable>
+        <variable display_value="">83735c4e73031300e6561afe2ff6a789</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -1645,7 +1557,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:15:36</sys_updated_on>
         <value>define_connection_inline</value>
-        <variable display_value="Connection">0081d40e73031300e6561afe2ff6a70f</variable>
+        <variable display_value="">0081d40e73031300e6561afe2ff6a70f</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -1659,7 +1571,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:15:36</sys_updated_on>
         <value>35aa573fd7802200bdbaee5b5e610375</value>
-        <variable display_value="MID Application">2d922f1a738b1300803594596bf6a727</variable>
+        <variable display_value="">2d922f1a738b1300803594596bf6a727</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -1673,7 +1585,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:15:36</sys_updated_on>
         <value>https://soap-service-free.mock.beeceptor.com/CountryInfoService.wso</value>
-        <variable display_value="Endpoint">9a521c0e73031300e6561afe2ff6a709</variable>
+        <variable display_value="">9a521c0e73031300e6561afe2ff6a709</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -1687,7 +1599,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:15:36</sys_updated_on>
         <value/>
-        <variable display_value="Connection Timeout">dc585787c7122010820469467ec260ce</variable>
+        <variable display_value="">dc585787c7122010820469467ec260ce</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -1701,7 +1613,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:15:36</sys_updated_on>
         <value>503dbca883113a10a14ac296feaad3e3</value>
-        <variable display_value="Select a WSDL">e5b29c0e73031300e6561afe2ff6a713</variable>
+        <variable display_value="">e5b29c0e73031300e6561afe2ff6a713</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -1715,7 +1627,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:35:07</sys_updated_on>
         <value>{"type":"ADV_NV","value":[]}</value>
-        <variable display_value="Headers">72171c8e73031300e6561afe2ff6a7c2</variable>
+        <variable display_value="">72171c8e73031300e6561afe2ff6a7c2</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -1729,7 +1641,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:15:36</sys_updated_on>
         <value>46cd3ce883113a10a14ac296feaad301</value>
-        <variable display_value="Operation">4ae2dc0e73031300e6561afe2ff6a7ae</variable>
+        <variable display_value="">4ae2dc0e73031300e6561afe2ff6a7ae</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -1743,7 +1655,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:15:36</sys_updated_on>
         <value>https://soap-service-free.mock.beeceptor.com/CountryInfoService.wso/ListOfCountryNamesByName</value>
-        <variable display_value="SOAP Action">2d13d84e73031300e6561afe2ff6a736</variable>
+        <variable display_value="">2d13d84e73031300e6561afe2ff6a736</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -1757,9 +1669,8 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:15:36</sys_updated_on>
         <value>9df941930a00067818fcb3834b216f8f</value>
-        <variable display_value="Capabilities">1bd3635a738b1300803594596bf6a7e9</variable>
+        <variable display_value="">1bd3635a738b1300803594596bf6a7e9</variable>
     </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_6e61d40e73031300e6561afe2ff6a704^id=cbdf38ac83113a10a14ac296feaad399"/>
     <sys_translated_text action="delete_multiple" query="documentkey=cbdf38ac83113a10a14ac296feaad399"/>
     <sys_hub_step_ext_input action="delete_multiple" query="model=cbdf38ac83113a10a14ac296feaad399"/>
     <sys_hub_step_ext_output action="delete_multiple" query="model=cbdf38ac83113a10a14ac296feaad399"/>
@@ -2049,11 +1960,11 @@
         <sys_created_on>2025-11-15 15:01:25</sys_created_on>
         <sys_id>4e5a4d2083913a10a14ac296feaad334</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>source_data</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_74aefc2c83113a10a14ac296feaad306_source_data_en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 15:01:25</sys_updated_on>
         <url/>
@@ -2073,11 +1984,11 @@
         <sys_created_on>2025-11-15 14:15:37</sys_created_on>
         <sys_id>97df38ac83113a10a14ac296feaad3be</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_74aefc2c83113a10a14ac296feaad306___action_status___en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:15:37</sys_updated_on>
         <url/>
@@ -2096,11 +2007,11 @@
         <sys_created_on>2025-11-15 14:15:37</sys_created_on>
         <sys_id>dbdf38ac83113a10a14ac296feaad3c5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_74aefc2c83113a10a14ac296feaad306___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:15:37</sys_updated_on>
         <url/>
@@ -2202,12 +2113,11 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <inputs/>
         <label>JSON Parser step</label>
         <order>3</order>
         <outputs/>
         <section/>
-        <step_type display_value="JSON Parser">502328c387523300f917e55936cb0bf0</step_type>
+        <step_type display_value="">502328c387523300f917e55936cb0bf0</step_type>
         <sys_created_by>surya_snow</sys_created_by>
         <sys_created_on>2025-11-15 16:49:02</sys_created_on>
         <sys_id>2af26dec83d13a10a14ac296feaad3ae</sys_id>
@@ -2245,7 +2155,7 @@
 		}&#13;
 	}&#13;
 }</value>
-        <variable display_value="Sample payload">d335ac0787523300f917e55936cb0b1d</variable>
+        <variable display_value="">d335ac0787523300f917e55936cb0b1d</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -2259,46 +2169,9 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 16:49:02</sys_updated_on>
         <value>{"name":"root","children":[{"name":"Body","children":[{"name":"ListOfCountryNamesByNameResponse","children":[{"name":"ListOfCountryNamesByNameResult","children":[{"name":"array_of_tCountryCodeAndName","children":[{"name":"array_of_tCountryCodeAndName_object","children":[{"name":"sISOCode","children":[],"type":"string","jpath":"$.Body.ListOfCountryNamesByNameResponse.ListOfCountryNamesByNameResult.array_of_tCountryCodeAndName[*].sISOCode","previewValue":"AX"},{"name":"sName","children":[],"type":"string","jpath":"$.Body.ListOfCountryNamesByNameResponse.ListOfCountryNamesByNameResult.array_of_tCountryCodeAndName[*].sName","previewValue":"Åland Islands"}],"type":"object","jpath":"$.Body.ListOfCountryNamesByNameResponse.ListOfCountryNamesByNameResult.array_of_tCountryCodeAndName[*]","previewValue":""}],"type":"array.object","jpath":"$.Body.ListOfCountryNamesByNameResponse.ListOfCountryNamesByNameResult.array_of_tCountryCodeAndName[*]","previewValue":""}],"type":"object","jpath":"$.Body.ListOfCountryNamesByNameResponse.ListOfCountryNamesByNameResult","previewValue":""}],"type":"object","jpath":"$.Body.ListOfCountryNamesByNameResponse","previewValue":""}],"type":"object","jpath":"$.Body","previewValue":""}],"type":"object","jpath":"$","previewValue":""}</value>
-        <variable display_value="Target">4674240787523300f917e55936cb0b0e</variable>
+        <variable display_value="">4674240787523300f917e55936cb0b0e</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_2af26dec83d13a10a14ac296feaad3ae^id=2af26dec83d13a10a14ac296feaad3ae"/>
-    <sys_element_mapping action="delete_multiple" query="id=2af26dec83d13a10a14ac296feaad3ae"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>sample_payload</field>
-        <id>2af26dec83d13a10a14ac296feaad3ae</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-15 16:49:02</sys_created_on>
-        <sys_id>f6f26dec83d13a10a14ac296feaad3ba</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-15 16:49:02</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>source_data</field>
-        <id>2af26dec83d13a10a14ac296feaad3ae</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-15 16:49:02</sys_created_on>
-        <sys_id>26f26dec83d13a10a14ac296feaad3ba</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-15 16:49:02</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
-        <value>{{step[91266c98-3a79-4f8e-9824-ebadbf21f2df].Envelope}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>target_schema</field>
-        <id>2af26dec83d13a10a14ac296feaad3ae</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-15 16:49:02</sys_created_on>
-        <sys_id>62f26dec83d13a10a14ac296feaad3ba</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-15 16:49:02</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
-        <value/>
-    </sys_element_mapping>
     <sys_translated_text action="delete_multiple" query="documentkey=2af26dec83d13a10a14ac296feaad3ae"/>
     <sys_hub_step_ext_input action="delete_multiple" query="model=2af26dec83d13a10a14ac296feaad3ae"/>
     <sys_hub_step_ext_output action="delete_multiple" query="model=2af26dec83d13a10a14ac296feaad3ae^sys_idNOT IN26f26dec83d13a10a14ac296feaad3b2"/>
@@ -2422,11 +2295,11 @@
         <sys_created_on>2025-11-15 16:49:02</sys_created_on>
         <sys_id>e2f26dec83d13a10a14ac296feaad3b5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>root</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_2af26dec83d13a10a14ac296feaad3ae_root_en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 16:49:02</sys_updated_on>
         <url/>
@@ -2444,7 +2317,7 @@
         <order>1</order>
         <outputs/>
         <section/>
-        <step_type display_value="SOAP">6e61d40e73031300e6561afe2ff6a704</step_type>
+        <step_type display_value="">6e61d40e73031300e6561afe2ff6a704</step_type>
         <sys_created_by>surya_snow</sys_created_by>
         <sys_created_on>2025-11-15 14:35:08</sys_created_on>
         <sys_id>49540d6483513a10a14ac296feaad361</sys_id>
@@ -2466,7 +2339,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:35:08</sys_updated_on>
         <value>503dbca883113a10a14ac296feaad3e3</value>
-        <variable display_value="Select a WSDL">e5b29c0e73031300e6561afe2ff6a713</variable>
+        <variable display_value="">e5b29c0e73031300e6561afe2ff6a713</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -2480,7 +2353,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:35:08</sys_updated_on>
         <value>https://soap-service-free.mock.beeceptor.com/CountryInfoService.wso</value>
-        <variable display_value="Endpoint">9a521c0e73031300e6561afe2ff6a709</variable>
+        <variable display_value="">9a521c0e73031300e6561afe2ff6a709</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -2494,7 +2367,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:35:08</sys_updated_on>
         <value/>
-        <variable display_value="Connection Timeout">dc585787c7122010820469467ec260ce</variable>
+        <variable display_value="">dc585787c7122010820469467ec260ce</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -2508,7 +2381,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:35:08</sys_updated_on>
         <value>https://soap-service-free.mock.beeceptor.com/CountryInfoService.wso/ListOfCountryNamesByName</value>
-        <variable display_value="SOAP Action">2d13d84e73031300e6561afe2ff6a736</variable>
+        <variable display_value="">2d13d84e73031300e6561afe2ff6a736</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -2522,7 +2395,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:35:08</sys_updated_on>
         <value>46cd3ce883113a10a14ac296feaad301</value>
-        <variable display_value="Operation">4ae2dc0e73031300e6561afe2ff6a7ae</variable>
+        <variable display_value="">4ae2dc0e73031300e6561afe2ff6a7ae</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -2536,7 +2409,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:35:08</sys_updated_on>
         <value>9df941930a00067818fcb3834b216f8f</value>
-        <variable display_value="Capabilities">1bd3635a738b1300803594596bf6a7e9</variable>
+        <variable display_value="">1bd3635a738b1300803594596bf6a7e9</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -2555,7 +2428,7 @@
       &lt;coun:ListOfCountryNamesByName/&gt;
    &lt;/soapenv:Body&gt;
 &lt;/soapenv:Envelope&gt;</value>
-        <variable display_value="SOAP Envelope">83735c4e73031300e6561afe2ff6a789</variable>
+        <variable display_value="">83735c4e73031300e6561afe2ff6a789</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -2569,7 +2442,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:35:08</sys_updated_on>
         <value>{"type":"ADV_NV","value":[]}</value>
-        <variable display_value="Headers">72171c8e73031300e6561afe2ff6a7c2</variable>
+        <variable display_value="">72171c8e73031300e6561afe2ff6a7c2</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -2583,7 +2456,7 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:35:08</sys_updated_on>
         <value>35aa573fd7802200bdbaee5b5e610375</value>
-        <variable display_value="MID Application">2d922f1a738b1300803594596bf6a727</variable>
+        <variable display_value="">2d922f1a738b1300803594596bf6a727</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -2597,9 +2470,8 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:35:08</sys_updated_on>
         <value>define_connection_inline</value>
-        <variable display_value="Connection">0081d40e73031300e6561afe2ff6a70f</variable>
+        <variable display_value="">0081d40e73031300e6561afe2ff6a70f</variable>
     </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_6e61d40e73031300e6561afe2ff6a704^id=49540d6483513a10a14ac296feaad361"/>
     <sys_translated_text action="delete_multiple" query="documentkey=49540d6483513a10a14ac296feaad361"/>
     <sys_hub_step_ext_input action="delete_multiple" query="model=49540d6483513a10a14ac296feaad361"/>
     <sys_hub_step_ext_output action="delete_multiple" query="model=49540d6483513a10a14ac296feaad361"/>
@@ -2652,12 +2524,11 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <inputs/>
         <label>XML Parser step</label>
         <order>2</order>
         <outputs/>
         <section/>
-        <step_type display_value="XML Parser">34371337773223007b2380733b106170</step_type>
+        <step_type display_value="">34371337773223007b2380733b106170</step_type>
         <sys_created_by>surya_snow</sys_created_by>
         <sys_created_on>2025-11-15 16:49:02</sys_created_on>
         <sys_id>a2f26dec83d13a10a14ac296feaad394</sys_id>
@@ -3671,7 +3542,7 @@
         &lt;/m:ListOfCountryNamesByNameResponse&gt;&#13;
     &lt;/soap:Body&gt;&#13;
 &lt;/soap:Envelope&gt;</value>
-        <variable display_value="Sample payload">48ff5bb7773223007b2380733b10612c</variable>
+        <variable display_value="">48ff5bb7773223007b2380733b10612c</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -3685,46 +3556,9 @@
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 16:49:02</sys_updated_on>
         <value>{"name":"Envelope","children":[{"name":"Body","children":[{"name":"ListOfCountryNamesByNameResponse","children":[{"name":"ListOfCountryNamesByNameResult","children":[{"name":"array_of_tCountryCodeAndName","children":[{"name":"tCountryCodeAndName","children":[{"name":"sISOCode","children":[],"type":"string","xpath":"/soap:Envelope/soap:Body/m:ListOfCountryNamesByNameResponse/m:ListOfCountryNamesByNameResult/m:tCountryCodeAndName/m:sISOCode","previewValue":"AX"},{"name":"sName","children":[],"type":"string","xpath":"/soap:Envelope/soap:Body/m:ListOfCountryNamesByNameResponse/m:ListOfCountryNamesByNameResult/m:tCountryCodeAndName/m:sName","previewValue":"Åland Islands"}],"type":"object","xpath":"/soap:Envelope/soap:Body/m:ListOfCountryNamesByNameResponse/m:ListOfCountryNamesByNameResult/m:tCountryCodeAndName","previewValue":""}],"type":"array.object","xpath":"/soap:Envelope/soap:Body/m:ListOfCountryNamesByNameResponse/m:ListOfCountryNamesByNameResult/m:tCountryCodeAndName","previewValue":""}],"type":"object","xpath":"/soap:Envelope/soap:Body/m:ListOfCountryNamesByNameResponse/m:ListOfCountryNamesByNameResult","previewValue":""}],"type":"object","xpath":"/soap:Envelope/soap:Body/m:ListOfCountryNamesByNameResponse","previewValue":""}],"type":"object","xpath":"/soap:Envelope/soap:Body","previewValue":""}],"type":"object","xpath":"/soap:Envelope","previewValue":""}</value>
-        <variable display_value="Target">13e1f5fd735b2300ab7931d7caf6a76b</variable>
+        <variable display_value="">13e1f5fd735b2300ab7931d7caf6a76b</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_a2f26dec83d13a10a14ac296feaad394^id=a2f26dec83d13a10a14ac296feaad394"/>
-    <sys_element_mapping action="delete_multiple" query="id=a2f26dec83d13a10a14ac296feaad394"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>sample_payload</field>
-        <id>a2f26dec83d13a10a14ac296feaad394</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-15 16:49:02</sys_created_on>
-        <sys_id>eef26dec83d13a10a14ac296feaad39f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-15 16:49:02</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_34371337773223007b2380733b106170</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>source_data</field>
-        <id>a2f26dec83d13a10a14ac296feaad394</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-15 16:49:02</sys_created_on>
-        <sys_id>2ef26dec83d13a10a14ac296feaad39f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-15 16:49:02</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_34371337773223007b2380733b106170</table>
-        <value>{{step[b621a37d-9baa-43f2-af45-167cb65c04b0].response_body}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>target_schema</field>
-        <id>a2f26dec83d13a10a14ac296feaad394</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-15 16:49:02</sys_created_on>
-        <sys_id>6af26dec83d13a10a14ac296feaad39f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-15 16:49:02</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_34371337773223007b2380733b106170</table>
-        <value/>
-    </sys_element_mapping>
     <sys_translated_text action="delete_multiple" query="documentkey=a2f26dec83d13a10a14ac296feaad394"/>
     <sys_hub_step_ext_input action="delete_multiple" query="model=a2f26dec83d13a10a14ac296feaad394"/>
     <sys_hub_step_ext_output action="delete_multiple" query="model=a2f26dec83d13a10a14ac296feaad394^sys_idNOT IN6ef26dec83d13a10a14ac296feaad397"/>
@@ -3848,11 +3682,11 @@
         <sys_created_on>2025-11-15 16:49:02</sys_created_on>
         <sys_id>2ef26dec83d13a10a14ac296feaad39a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Envelope</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_a2f26dec83d13a10a14ac296feaad394_Envelope_en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 16:49:02</sys_updated_on>
         <url/>
@@ -4143,11 +3977,11 @@
         <sys_created_on>2025-11-15 16:49:02</sys_created_on>
         <sys_id>62f26dec83d13a10a14ac296feaad37a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>source_data</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_c1540d6483513a10a14ac296feaad35b_source_data_en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 16:49:02</sys_updated_on>
         <url/>
@@ -4167,11 +4001,11 @@
         <sys_created_on>2025-11-15 14:35:08</sys_created_on>
         <sys_id>55540d6483513a10a14ac296feaad37b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_c1540d6483513a10a14ac296feaad35b___action_status___en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:35:08</sys_updated_on>
         <url/>
@@ -4190,11 +4024,11 @@
         <sys_created_on>2025-11-15 14:35:09</sys_created_on>
         <sys_id>9d540d6483513a10a14ac296feaad380</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_c1540d6483513a10a14ac296feaad35b___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-15 14:35:09</sys_updated_on>
         <url/>

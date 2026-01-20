@@ -30,7 +30,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>82e1f2058351fa10a14ac296feaad3e2</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Copy of Parse JSON and Insert into Translated HTML</sys_name>
         <sys_overrides/>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
@@ -38,7 +38,7 @@
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_82e1f2058351fa10a14ac296feaad3e2</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-17 11:54:14</sys_updated_on>
+        <sys_updated_on>2025-12-30 09:47:36</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -131,18 +131,6 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=02e136058351fa10a14ac296feaad337"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>02e136058351fa10a14ac296feaad337</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-17 11:50:51</sys_created_on>
-        <sys_id>56e136058351fa10a14ac296feaad363</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-17 11:50:51</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>jsonObject</field>
         <id>02e136058351fa10a14ac296feaad337</id>
         <sys_created_by>surya_snow</sys_created_by>
@@ -153,18 +141,6 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_updated_on>2025-11-17 11:53:41</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_02e136058351fa10a14ac296feaad337</table>
         <value>{{action.jsonpayload}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>02e136058351fa10a14ac296feaad337</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-17 11:50:51</sys_created_on>
-        <sys_id>1ae136058351fa10a14ac296feaad363</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-17 11:50:51</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_02e136058351fa10a14ac296feaad337^id=02e136058351fa10a14ac296feaad337"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=02e136058351fa10a14ac296feaad337"/>
@@ -434,11 +410,11 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_created_on>2025-11-17 11:50:51</sys_created_on>
         <sys_id>16e136058351fa10a14ac296feaad341</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Query Number</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_02e136058351fa10a14ac296feaad337_query_number_en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-17 11:50:51</sys_updated_on>
         <url/>
@@ -457,11 +433,11 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_created_on>2025-11-17 11:50:51</sys_created_on>
         <sys_id>16e136058351fa10a14ac296feaad35d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>HTML Summary EN</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_02e136058351fa10a14ac296feaad337_html_summary_en_en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-17 11:50:51</sys_updated_on>
         <url/>
@@ -657,18 +633,6 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=9ee136058351fa10a14ac296feaad366"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>9ee136058351fa10a14ac296feaad366</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-17 11:50:52</sys_created_on>
-        <sys_id>9ae136058351fa10a14ac296feaad383</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-17 11:50:52</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>htmlSummaryEN</field>
         <id>9ee136058351fa10a14ac296feaad366</id>
         <sys_created_by>surya_snow</sys_created_by>
@@ -679,18 +643,6 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_updated_on>2025-11-17 11:50:52</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_9ee136058351fa10a14ac296feaad366</table>
         <value>{{step[316af19a-59e6-466c-8fdb-338fdf9fac90].html_summary_en}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>9ee136058351fa10a14ac296feaad366</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-17 11:50:52</sys_created_on>
-        <sys_id>5ee136058351fa10a14ac296feaad383</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-17 11:50:52</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_9ee136058351fa10a14ac296feaad366^id=9ee136058351fa10a14ac296feaad366"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=9ee136058351fa10a14ac296feaad366"/>
@@ -877,11 +829,11 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_created_on>2025-11-17 11:50:52</sys_created_on>
         <sys_id>92e136058351fa10a14ac296feaad371</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Decoded HTML</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_9ee136058351fa10a14ac296feaad366_decoded_html_en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-17 11:50:52</sys_updated_on>
         <url/>
@@ -1246,11 +1198,11 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_created_on>2025-11-17 11:53:41</sys_created_on>
         <sys_id>ef82b2458351fa10a14ac296feaad342</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>jsonPayload</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_82e1f2058351fa10a14ac296feaad3e2_jsonpayload_en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-17 11:53:41</sys_updated_on>
         <url/>
@@ -1270,11 +1222,11 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_created_on>2025-11-17 11:50:52</sys_created_on>
         <sys_id>1ee136058351fa10a14ac296feaad39e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_82e1f2058351fa10a14ac296feaad3e2___action_status___en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-17 11:50:52</sys_updated_on>
         <url/>
@@ -1293,11 +1245,11 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_created_on>2025-11-17 11:50:52</sys_created_on>
         <sys_id>9ae136058351fa10a14ac296feaad3a4</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_82e1f2058351fa10a14ac296feaad3e2___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-17 11:50:52</sys_updated_on>
         <url/>
@@ -1448,18 +1400,6 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=2ba2b6458351fa10a14ac296feaad38a"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>2ba2b6458351fa10a14ac296feaad38a</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-17 11:54:13</sys_created_on>
-        <sys_id>aba2b6458351fa10a14ac296feaad39a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-17 11:54:13</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>htmlSummaryEN</field>
         <id>2ba2b6458351fa10a14ac296feaad38a</id>
         <sys_created_by>surya_snow</sys_created_by>
@@ -1470,18 +1410,6 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_updated_on>2025-11-17 11:54:13</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_2ba2b6458351fa10a14ac296feaad38a</table>
         <value>{{step[316af19a-59e6-466c-8fdb-338fdf9fac90].html_summary_en}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>2ba2b6458351fa10a14ac296feaad38a</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-17 11:54:13</sys_created_on>
-        <sys_id>6fa2b6458351fa10a14ac296feaad39a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-17 11:54:13</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_2ba2b6458351fa10a14ac296feaad38a^id=2ba2b6458351fa10a14ac296feaad38a"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=2ba2b6458351fa10a14ac296feaad38a"/>
@@ -1668,11 +1596,11 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_created_on>2025-11-17 11:54:13</sys_created_on>
         <sys_id>6ba2b6458351fa10a14ac296feaad394</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Decoded HTML</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_2ba2b6458351fa10a14ac296feaad38a_decoded_html_en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-17 11:54:13</sys_updated_on>
         <url/>
@@ -1868,18 +1796,6 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=efa2b6458351fa10a14ac296feaad372"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>efa2b6458351fa10a14ac296feaad372</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-17 11:54:13</sys_created_on>
-        <sys_id>23a2b6458351fa10a14ac296feaad387</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-17 11:54:13</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>jsonObject</field>
         <id>efa2b6458351fa10a14ac296feaad372</id>
         <sys_created_by>surya_snow</sys_created_by>
@@ -1890,18 +1806,6 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_updated_on>2025-11-17 11:54:13</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_efa2b6458351fa10a14ac296feaad372</table>
         <value>{{action.jsonpayload}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>efa2b6458351fa10a14ac296feaad372</id>
-        <sys_created_by>surya_snow</sys_created_by>
-        <sys_created_on>2025-11-17 11:54:13</sys_created_on>
-        <sys_id>e3a2b6458351fa10a14ac296feaad387</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-11-17 11:54:13</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_efa2b6458351fa10a14ac296feaad372^id=efa2b6458351fa10a14ac296feaad372"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=efa2b6458351fa10a14ac296feaad372"/>
@@ -2171,11 +2075,11 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_created_on>2025-11-17 11:54:13</sys_created_on>
         <sys_id>6fa2b6458351fa10a14ac296feaad37d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Query Number</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_efa2b6458351fa10a14ac296feaad372_query_number_en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-17 11:54:13</sys_updated_on>
         <url/>
@@ -2194,11 +2098,11 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_created_on>2025-11-17 11:54:13</sys_created_on>
         <sys_id>efa2b6458351fa10a14ac296feaad380</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>HTML Summary EN</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_efa2b6458351fa10a14ac296feaad372_html_summary_en_en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-17 11:54:13</sys_updated_on>
         <url/>
@@ -2540,11 +2444,11 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_created_on>2025-11-17 11:54:13</sys_created_on>
         <sys_id>a7a2b6458351fa10a14ac296feaad36c</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>jsonPayload</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_9fa2b6458351fa10a14ac296feaad365_jsonpayload_en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-17 11:54:13</sys_updated_on>
         <url/>
@@ -2564,11 +2468,11 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_created_on>2025-11-17 11:54:14</sys_created_on>
         <sys_id>3fa2b6458351fa10a14ac296feaad3c5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_9fa2b6458351fa10a14ac296feaad365___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-17 11:54:14</sys_updated_on>
         <url/>
@@ -2587,11 +2491,11 @@ outputs.html_summary_en = str.htmlSummaryEN;&#13;
         <sys_created_on>2025-11-17 11:54:14</sys_created_on>
         <sys_id>e3a2b6458351fa10a14ac296feaad3c0</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_9fa2b6458351fa10a14ac296feaad365___action_status___en</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
         <sys_updated_on>2025-11-17 11:54:14</sys_updated_on>
         <url/>

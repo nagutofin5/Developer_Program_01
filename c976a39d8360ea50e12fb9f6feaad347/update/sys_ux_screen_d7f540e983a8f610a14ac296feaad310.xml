@@ -4,6 +4,7 @@
         <app_config display_value="UI Builder 01">9b4248298368f610a14ac296feaad3dc</app_config>
         <description/>
         <disable_auto_reflow>true</disable_auto_reflow>
+        <disable_interoperable>false</disable_interoperable>
         <event_mappings/>
         <macroponent display_value="Default">4bf540e983a8f610a14ac296feaad309</macroponent>
         <macroponent_config>{
