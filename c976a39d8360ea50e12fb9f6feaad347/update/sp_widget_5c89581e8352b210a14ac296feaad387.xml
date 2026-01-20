@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, spUtil, $element) {
+
+    /* widget controller */
+    var c = this;
+    var g_form = $scope.page.g_form;
+
+    $scope.$watch(function() {
+        return g_form.getValue('short_description'); // Replace 'your_field_name' with the actual field name
+    }, function(newValue, oldValue) {
+        var newCharactersLength = newValue.length;
+
+        if (newCharactersLength != 0) {
+
+            var charactersLeft = 160 - parseInt(newCharactersLength);
+            c.data.isVisible = true;
+
+            if (newCharactersLength < 160) {
+                c.data.counterMessage = '';
+                c.data.textColor = "#806d6c";
+                c.data.counterMessage = charactersLeft + " characters remaining of 160 characters";
+            } else if (newCharactersLength == 160) {
+                c.data.counterMessage = '';
+                c.data.textColor = "#e0170e";
+                c.data.counterMessage = "The characters' length has reached its maximum length.";
+            } else {
+                c.data.counterMessage = '';
+                c.data.textColor = "#e0170e";
+                c.data.counterMessage = "The length of the characters entered exceeds 160.";
+            }
+        } else {
+            c.data.isVisible = false;
+        }
+    });
+
+
+
+
+
+
+
+    /*c.getFocusedElementAttributes = function() {
+        var activeElement = document.activeElement; // Get the currently focused element
+
+        if (activeElement) {
+            // Fetch specific attributes
+            var elementId = activeElement.id;
+            var elementClass = activeElement.className;
+            var elementType = activeElement.tagName.toLowerCase();
+            var elementValue = activeElement.value; // Relevant for input fields
+
+            alert("elementId : " + elementId);
+            // You can store these values in the client controller scope (c) or data object if needed
+            c.focusedElementInfo = {
+                id: elementId,
+                type: elementType,
+                value: elementValue
+            };
+
+        }
+    };*/
+
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>characters_count</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Characters Count</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    /* populate the 'data' object */
+    /* e.g., data.table = $sp.getValue('table'); */
+    /* server script */
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2026-01-09 15:00:37</sys_created_on>
+        <sys_id>5c89581e8352b210a14ac296feaad387</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name>Characters Count</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sp_widget_5c89581e8352b210a14ac296feaad387</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2026-01-12 15:23:39</sys_updated_on>
+        <template><![CDATA[<div ng-if="c.data.isVisible">
+    <!--<p style="color:#e0170e; font-size: 11px;">{{c.data.counterMessage}}</p>-->
+  	<p style="color:{{c.data.textColor}}"; font-size: 11px;">{{c.data.counterMessage}}</p>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>5c89581e8352b210a14ac296feaad387</id>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2026-01-09 15:00:36</sys_created_on>
+        <sys_id>2e99dcde8352b210a14ac296feaad3f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2026-01-09 15:00:36</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
