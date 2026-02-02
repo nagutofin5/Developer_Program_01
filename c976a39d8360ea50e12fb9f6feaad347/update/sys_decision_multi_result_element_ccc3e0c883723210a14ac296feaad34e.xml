@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_decision_multi_result_element">
+    <sys_decision_multi_result_element action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>u_user_to_notify</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>User to NOtify</label>
+        <mandatory>false</mandatory>
+        <max_length>100</max_length>
+        <model display_value="Email Notify based on CI delta">fbb3ac4883723210a14ac296feaad3bf</model>
+        <model_id>fbb3ac4883723210a14ac296feaad3bf</model_id>
+        <model_table/>
+        <name>var__m_sys_decision_multi_result_element_fbb3ac4883723210a14ac296feaad3bf</name>
+        <next_element/>
+        <order>100</order>
+        <parent display_value="User to NOtify">cd7edcc083723210a14ac296feaad388</parent>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_decision_multi_result_element</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2026-01-27 12:30:00</sys_created_on>
+        <sys_id>ccc3e0c883723210a14ac296feaad34e</sys_id>
+        <sys_name>User to NOtify</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sys_decision_multi_result_element_ccc3e0c883723210a14ac296feaad34e</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2026-01-27 12:30:00</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_decision_multi_result_element>
+</record_update>
