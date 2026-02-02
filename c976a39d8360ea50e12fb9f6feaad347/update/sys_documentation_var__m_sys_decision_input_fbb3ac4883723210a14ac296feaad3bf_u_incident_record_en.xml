@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_incident_record" label="Incident Record" language="en" table="var__m_sys_decision_input_fbb3ac4883723210a14ac296feaad3bf">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_incident_record</element>
+            <help/>
+            <hint/>
+            <label>Incident Record</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_fbb3ac4883723210a14ac296feaad3bf</name>
+            <plural>Incident Record</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>surya_snow</sys_created_by>
+            <sys_created_on>2026-01-27 12:30:00</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Incident Record</sys_name>
+            <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_decision_input_fbb3ac4883723210a14ac296feaad3bf_u_incident_record_en</sys_update_name>
+            <sys_updated_by>surya_snow</sys_updated_by>
+            <sys_updated_on>2026-01-27 12:30:00</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
