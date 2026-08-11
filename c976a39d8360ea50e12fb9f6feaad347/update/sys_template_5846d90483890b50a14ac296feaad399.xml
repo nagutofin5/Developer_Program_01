@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_template">
+    <sys_template action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <global>false</global>
+        <group/>
+        <groups/>
+        <link_element/>
+        <name>Surya Incident</name>
+        <next/>
+        <next_child/>
+        <roles/>
+        <short_description/>
+        <show_on_template_bar>true</show_on_template_bar>
+        <stand_alone>false</stand_alone>
+        <sys_class_name>sys_template</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2026-05-19 12:34:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5846d90483890b50a14ac296feaad399</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Surya Incident</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>sys_template_5846d90483890b50a14ac296feaad399</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2026-05-19 12:34:40</sys_updated_on>
+        <table>incident</table>
+        <template>caller_id=77ad8176731313005754660c4cf6a7de^category=software^cmdb_ci=cfc1f1213784200044e0bfc8bcbe5d21^description=Unable to send or receive emails.&#13;
+&#13;
+*ANNIE-IBM&#13;
+&#13;
+*RON-IBM^impact=1^knowledge=false^opened_by=6816f79cc0a8016401c5a33be04be441^short_description=Email server is down.^state=1^subcategory=email^urgency=1^EQ</template>
+        <user display_value="Nagaraj ServiceNow">0308e4c6830a2210cb2d15a6feaad38f</user>
+        <view/>
+    </sys_template>
+</record_update>

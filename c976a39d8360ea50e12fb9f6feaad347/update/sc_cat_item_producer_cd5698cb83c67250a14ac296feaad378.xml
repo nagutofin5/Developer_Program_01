@@ -7,6 +7,7 @@
         <billable>false</billable>
         <can_cancel>false</can_cancel>
         <category display_value="Self-Services">7ffda66d83c96210e12fb9f6feaad3c0</category>
+        <cc_render_type/>
         <checked_out/>
         <cost>0</cost>
         <custom_cart/>
@@ -61,7 +62,7 @@
         <recurring_frequency/>
         <redirect_url>generated_record</redirect_url>
         <request_method/>
-        <roles/>
+        <roles>snc_internal</roles>
         <save_options/>
         <save_script><![CDATA[/**
 * This script is executed at every step save in Catalog Builder. 
@@ -81,7 +82,7 @@
 * Avoid `current.setAbortAction()` and generate a separate record
 * Use `producer.var1` to access variables
 */]]></script>
-        <short_description>Create a ticket for your queries</short_description>
+        <short_description>Create a support ticket for your queries</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state/>
@@ -89,14 +90,14 @@
         <sys_created_by>surya_snow</sys_created_by>
         <sys_created_on>2025-12-30 12:27:56</sys_created_on>
         <sys_id>cd5698cb83c67250a14ac296feaad378</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name>Create an Incident</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
         <sys_update_name>sc_cat_item_producer_cd5698cb83c67250a14ac296feaad378</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2025-12-30 14:42:26</sys_updated_on>
+        <sys_updated_on>2026-03-24 18:37:40</sys_updated_on>
         <table_name>incident</table_name>
         <taxonomy_topic/>
         <template/>
@@ -104,7 +105,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>28</version>
+        <version>35</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

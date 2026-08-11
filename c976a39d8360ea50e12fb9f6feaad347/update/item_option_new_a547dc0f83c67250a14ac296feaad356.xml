@@ -14,6 +14,7 @@
         <delete_roles/>
         <delivery_plan/>
         <description/>
+        <disable_initial_slot_fill>false</disable_initial_slot_fill>
         <display_title>false</display_title>
         <do_not_select_first>false</do_not_select_first>
         <dynamic_default_value/>
@@ -22,7 +23,7 @@
         <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field/>
+        <field>opened_by</field>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
@@ -31,15 +32,17 @@
         <instructions/>
         <layout>normal</layout>
         <list_table/>
+        <lookup_dependent_question/>
         <lookup_label/>
         <lookup_price/>
+        <lookup_source/>
         <lookup_table/>
         <lookup_unique>false</lookup_unique>
         <lookup_value/>
         <macro/>
         <macroponent/>
         <mandatory>false</mandatory>
-        <map_to_field>false</map_to_field>
+        <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>opened_by</name>
@@ -79,14 +82,14 @@
         <sys_created_by>surya_snow</sys_created_by>
         <sys_created_on>2025-12-30 12:31:54</sys_created_on>
         <sys_id>a547dc0f83c67250a14ac296feaad356</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Opened by</sys_name>
         <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
         <sys_update_name>item_option_new_a547dc0f83c67250a14ac296feaad356</sys_update_name>
         <sys_updated_by>surya_snow</sys_updated_by>
-        <sys_updated_on>2025-12-30 12:41:51</sys_updated_on>
+        <sys_updated_on>2026-03-24 18:25:12</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
