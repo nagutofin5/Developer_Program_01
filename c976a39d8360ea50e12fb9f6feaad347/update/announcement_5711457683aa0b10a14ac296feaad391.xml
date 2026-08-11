@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="announcement">
+    <announcement action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <click_target/>
+        <details/>
+        <details_link_text/>
+        <details_page/>
+        <details_url/>
+        <dismiss_options>not_dismissible</dismiss_options>
+        <display_first>false</display_first>
+        <display_style display_value="Coral Normal">25074e5543935610ca4c1f425db8f279</display_style>
+        <from>2026-08-10 13:37:36</from>
+        <glyph>star-o</glyph>
+        <glyph_alt_text/>
+        <name>Instance</name>
+        <public>true</public>
+        <roles/>
+        <show_for_unauthenticated_users_only>false</show_for_unauthenticated_users_only>
+        <summary>The active account for your current session is "surya43kanti@gmail.com"</summary>
+        <sys_class_name>announcement</sys_class_name>
+        <sys_created_by>surya_snow</sys_created_by>
+        <sys_created_on>2026-08-10 13:38:43</sys_created_on>
+        <sys_id>5711457683aa0b10a14ac296feaad391</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Instance</sys_name>
+        <sys_package display_value="Developer Program" source="c976a39d8360ea50e12fb9f6feaad347">c976a39d8360ea50e12fb9f6feaad347</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Program">c976a39d8360ea50e12fb9f6feaad347</sys_scope>
+        <sys_update_name>announcement_5711457683aa0b10a14ac296feaad391</sys_update_name>
+        <sys_updated_by>surya_snow</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:54:35</sys_updated_on>
+        <title>Instance</title>
+        <to/>
+        <type>67eaf134e7a3320075c2a117c2f6a9d2,52fa79f8e763320075c2a117c2f6a991</type>
+    </announcement>
+    <sys_translated_text action="delete_multiple" query="documentkey=5711457683aa0b10a14ac296feaad391"/>
+</record_update>
